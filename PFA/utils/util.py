@@ -15,54 +15,55 @@ from torch.utils.data import DataLoader
 import random
 
 from .tools import *
-# from .dataset import ScribbleClassData
+from custom_dataset import ScribbleSegTrainDataset, ScribbleSegTestDataset
 
 
-# def data_loader(train, args):
-#     value_scale = 255
-#     mean = [0.485, 0.456, 0.406]
-#     mean = [item * value_scale for item in mean]
-#     std = [0.229, 0.224, 0.225]
-#     std = [item * value_scale for item in std]
-#     if train:
-#         train_transform = Compose([
-#             RandScale([0.5, 2.0]),
-#             RandRotate([-10, 10], padding=mean, ignore_label=args.dataset.ignore_label),
-#             RandomGaussianBlur(),
-#             RandomHorizontalFlip(),
-#             Crop([args.dataset.crop_size, args.dataset.crop_size],
-#                  crop_type='rand', padding=mean,
-#                  ignore_label=args.dataset.ignore_label),
-#             ToTensor(),
-#             Normalize(mean=mean, std=std)])
-#         train_dataset = ScribbleClassData(data_list=args.dataset.train_data_list,
-#                                           data_root=args.dataset.data_root,
-#                                           transform=train_transform,
-#                                           path=args.dataset.label_path)
-#         return train_dataset
-#     else:
-#         val_transform = Compose([
-#             Crop([args.dataset.crop_size, args.dataset.crop_size],
-#                  crop_type='center', padding=mean, ignore_label=args.dataset.ignore_label),
-#             ToTensor(),
-#             Normalize(mean=mean, std=std)])
+def data_loader(train, args):
+    value_scale = 255
+    mean = [0.485, 0.456, 0.406]
+    mean = [item * value_scale for item in mean]
+    std = [0.229, 0.224, 0.225]
+    std = [item * value_scale for item in std]
+    if train:
+        train_transform = Compose([
+            RandScale([0.5, 2.0]),
+            RandRotate([-10, 10], padding=mean, ignore_label=args.dataset.ignore_label),
+            RandomGaussianBlur(),
+            RandomHorizontalFlip(),
+            Crop([args.dataset.crop_size, args.dataset.crop_size],
+                 crop_type='rand', padding=mean,
+                 ignore_label=args.dataset.ignore_label),
+            ToTensor(),
+            Normalize(mean=mean, std=std)])
+        train_dataset = ScribbleSegTrainDataset(
+            root_dir=args.dataset.data_root,
+            transform=train_transform
+        )
 
-#         val_dataset = ScribbleClassData(data_list=args.dataset.val_data_list,
-#                                         data_root=args.dataset.data_root,
-#                                         transform=val_transform,
-#                                         path=args.dataset.label_path)
-#         return val_dataset
+        return train_dataset
+    else:
+        val_transform = Compose([
+            Crop([args.dataset.crop_size, args.dataset.crop_size],
+                 crop_type='center', padding=mean, ignore_label=args.dataset.ignore_label),
+            ToTensor(),
+            Normalize(mean=mean, std=std)])
+
+        val_dataset = ScribbleSegTestDataset(
+            root_dir=args.dataset.data_root,
+            transform=val_transform)
+        
+        return val_dataset
 
 
-# def get_loader(is_train, args):
-#     if is_train:
-#         return DataLoader(data_loader(train=is_train, args=args), num_workers=args.dataset.num_workers,
-#                           batch_size=args.dataset.batch_size,
-#                           shuffle=args.dataset.shuffle, pin_memory=args.dataset.pin_memory)
-#     else:
-#         return DataLoader(data_loader(train=is_train, args=args), num_workers=args.dataset.num_workers,
-#                           batch_size=args.dataset.batch_size,
-#                           shuffle=args.dataset.shuffle, pin_memory=args.dataset.pin_memory)
+def get_loader(is_train, args):
+    if is_train:
+        return DataLoader(data_loader(train=is_train, args=args), num_workers=args.dataset.num_workers,
+                          batch_size=args.dataset.batch_size,
+                          shuffle=args.dataset.shuffle, pin_memory=args.dataset.pin_memory)
+    else:
+        return DataLoader(data_loader(train=is_train, args=args), num_workers=args.dataset.num_workers,
+                          batch_size=args.dataset.batch_size,
+                          shuffle=args.dataset.shuffle, pin_memory=args.dataset.pin_memory)
 
 
 def setup_seed(seed):
