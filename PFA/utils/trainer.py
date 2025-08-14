@@ -12,8 +12,8 @@ import torch.optim as optim
 import torch.nn.functional as F
 
 
-from utils import util
-from model.basic_model import MixTrModel
+from ..utils import util
+from ..model.basic_model import MixTrModel
 from .util import check_values, extract_prototype
 from .loss import SegLoss, EigLoss, PredConLoss
 from .tools import Losses, get_scheduler, Logger, Timer
@@ -303,7 +303,7 @@ class MixTrTrainer(object):
         tbar = tqdm(self.train_loader)
         for self.batch_id, batch in enumerate(tbar):
 
-            img, label, class_label, image_path = batch
+            img, label, _, class_label, img_path = batch
 
             input_size = img.size()[2:4]
 
