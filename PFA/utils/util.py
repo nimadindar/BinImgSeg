@@ -15,7 +15,7 @@ from torch.utils.data import DataLoader
 import random
 
 from .tools import *
-from custom_dataset import ScribbleSegTrainDataset, ScribbleSegTestDataset
+from custom_dataset import ScribbleSegDataset
 
 
 def data_loader(train, args):
@@ -35,9 +35,11 @@ def data_loader(train, args):
                  ignore_label=args.dataset.ignore_label),
             ToTensor(),
             Normalize(mean=mean, std=std)])
-        train_dataset = ScribbleSegTrainDataset(
-            root_dir=args.dataset.data_root,
-            transform=train_transform
+        train_dataset = ScribbleSegDataset(
+            root_dir=args.dataset.data_root_train,
+            split='train',
+            transform=train_transform,
+            load_gt=True
         )
 
         return train_dataset
@@ -48,9 +50,11 @@ def data_loader(train, args):
             ToTensor(),
             Normalize(mean=mean, std=std)])
 
-        val_dataset = ScribbleSegTestDataset(
-            root_dir=args.dataset.data_root,
-            transform=val_transform)
+        val_dataset = ScribbleSegDataset(
+            root_dir=args.dataset.data_root_test,
+            split='test',
+            transform=val_transform,
+            load_gt=False)
         
         return val_dataset
 
