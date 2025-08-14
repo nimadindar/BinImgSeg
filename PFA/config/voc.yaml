@@ -3,12 +3,13 @@ project_name: test1
 model:
   backbone: mit_b1
   stride: [4, 2, 2, 1]
-  pretrained: True
+  pretrained: False
   encoder_embed_dim: 72
   decoder_embedding_dim: 256
 
 dataset:
-  data_root: ./dataset/
+  data_root_train: ./dataset/train
+  data_root_test: ./dataset/test1
   # label_path: ScribbleLabels # label path
   # train_data_list: train.txt
   # val_data_list: val.txt
