@@ -1,13 +1,13 @@
 import os
-from utils import util, trainer
-from utils.tools import MyArgumentParser
+from .utils import util, trainer
+from .utils.tools import MyArgumentParser
 from omegaconf import OmegaConf
 
 if __name__ == "__main__":
     ArgParser = MyArgumentParser()
     parser = ArgParser.get_parser()
     args = parser.parse_args()
-    cfg = OmegaConf.load("config/voc.yaml")
+    cfg = OmegaConf.load("./PFA/config/voc.yaml")
     util.setup_seed(100)
     cfg.work_dir.ckpt_dir = os.path.join(cfg.work_dir.ckpt_dir, cfg.project_name)
     os.makedirs(cfg.work_dir.ckpt_dir, exist_ok=True)
