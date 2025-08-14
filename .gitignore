@@ -1,3 +1,5 @@
 dataset
 *.pt
 log.txt
+*.png
+*.jpg
