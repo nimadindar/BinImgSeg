@@ -8,8 +8,8 @@
 """
 import torch
 import torch.nn as nn
-from model import mix_tr
-from model.seg_head import SegFormerHead
+from ..model import mix_tr
+from ..model.seg_head import SegFormerHead
 import torchvision.transforms as transforms
 import torch.nn.functional as F
 from PIL import Image
