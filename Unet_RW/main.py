@@ -86,7 +86,7 @@ def train(args):
                 inter0 += ((pr0*gt0)==1).sum().item()
                 union0 += ((pr0+gt0)>=1).sum().item()
         miou = 0.5*((inter0/(union0+1e-6)) + (inter1/(union1+1e-6)))
-        val_metrics, val_matrix = evaluate_split_confusion(dl_va, model, device, threshold=0.5)
+        val_metrics, val_matrix = evaluate_split_confusion(dl_va, model, device, threshold=0.6)
         print("Val confusion matrix [[tn, fp], [fn, tp]]:", val_matrix)
         print("Val metrics:",
             {k: (round(v,4) if isinstance(v, float) else v) for k,v in val_metrics.items()})
@@ -198,7 +198,7 @@ def train_hybrid(args,
 
         miou = 0.5*((inter0/(union0+1e-6)) + (inter1/(union1+1e-6)))
 
-        val_metrics, val_matrix = evaluate_split_confusion(dl_va, model, device, threshold=0.5)
+        val_metrics, val_matrix = evaluate_split_confusion(dl_va, model, device, threshold=0.6)
         print("Val confusion matrix [[tn, fp], [fn, tp]]:", val_matrix)
         print("Val metrics:",
             {k: (round(v,4) if isinstance(v, float) else v) for k,v in val_metrics.items()})
@@ -241,7 +241,7 @@ def main():
     parser.add_argument('--size', type=int, default=384)
     parser.add_argument('--bs', type=int, default=4)
     parser.add_argument('--epochs', type=int, default=60)
-    parser.add_argument('--early_stop', type=int, default=10)
+    parser.add_argument('--early_stop', type=int, default=15)
     parser.add_argument('--width', type=int, default=32)
     parser.add_argument('--lr', type=float, default=3e-4)
     parser.add_argument('--rw_beta', type=float, default=130.0)
@@ -252,8 +252,8 @@ def main():
     parser.add_argument('--crf', action='store_true')
     args = parser.parse_args()
     if args.mode=='train':
-        train(args)
-        # train_hybrid(args)
+        # train(args)
+        train_hybrid(args)
     else:
         infer(args)
 

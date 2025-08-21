@@ -104,6 +104,9 @@ class ScribbleDataset(Dataset):
             tfms += [A.LongestMaxSize(max_size=size), A.PadIfNeeded(size, size, border_mode=cv2.BORDER_CONSTANT)]
         if augment:
             tfms += [
+            A.LongestMaxSize(max_size=size),
+            A.PadIfNeeded(size, size, border_mode=cv2.BORDER_CONSTANT, value=0),
+
             A.HorizontalFlip(p=0.5),
             A.RandomRotate90(p=0.2),
 

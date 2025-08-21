@@ -10,7 +10,7 @@ def seeds_from_scribble(scrib):
     seeds[scrib == 1] = 1
     return seeds
 
-def rw_proba(img, scrib, beta=130, gamma=0.0, mode="cg_mg"):
+def rw_proba(img, scrib, beta=60, gamma=0.0, mode="cg_mg"):
 
     lab = cv2.cvtColor(img, cv2.COLOR_RGB2LAB)
     lab = cv2.GaussianBlur(lab, (0, 0), 0.8)
