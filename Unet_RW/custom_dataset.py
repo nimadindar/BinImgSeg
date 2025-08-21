@@ -7,7 +7,7 @@ import torch
 from torch.utils.data import Dataset
 from albumentations.pytorch import ToTensorV2
 
-from utils import imread, imread_gray
+from .utils import imread, imread_gray
 
 
     

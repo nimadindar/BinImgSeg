@@ -5,11 +5,11 @@ import torch
 
 import os, glob, argparse, random, cv2, numpy as np
 
-from utils import set_seed, make_confidence_mask, evaluate_split_confusion, crf_refine, save_mask, build_train_tfms, build_val_tfms, imread
-from custom_dataset import ScribbleDataset, HybridTrainDataset, ValProxy
-from random_walk import rw_proba
-from loss import MaskedBCEDice
-from U_net import UNet
+from .utils import set_seed, make_confidence_mask, evaluate_split_confusion, crf_refine, save_mask, build_train_tfms, build_val_tfms, imread
+from .custom_dataset import ScribbleDataset, HybridTrainDataset, ValProxy
+from .random_walk import rw_proba
+from .loss import MaskedBCEDice
+from .U_net import UNet
 
 HAS_CRF = False
 try:
