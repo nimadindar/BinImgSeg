@@ -104,11 +104,14 @@ class ScribbleDataset(Dataset):
             tfms += [A.LongestMaxSize(max_size=size), A.PadIfNeeded(size, size, border_mode=cv2.BORDER_CONSTANT)]
         if augment:
             tfms += [
-                A.HorizontalFlip(p=0.5),
-                A.VerticalFlip(p=0.1),
-                A.RandomRotate90(p=0.2),
-                A.ColorJitter(p=0.2, brightness=0.2, contrast=0.2, saturation=0.2, hue=0.02),
-                A.GaussNoise(p=0.15),
+            A.HorizontalFlip(p=0.5),
+            A.RandomRotate90(p=0.2),
+
+            A.ShiftScaleRotate(
+                shift_limit=0.02, scale_limit=0.05, rotate_limit=5,
+                border_mode=cv2.BORDER_CONSTANT, value=0, mask_value=0, p=0.3
+        ),
+
             ]
         tfms += [A.Normalize(), ToTensorV2()]
         self.tfms = A.Compose(tfms)
@@ -116,7 +119,7 @@ class ScribbleDataset(Dataset):
         return len(self.img_paths)
     def __getitem__(self, idx):
         img = imread(self.img_paths[idx])
-        scrib = cv2.imread_gray(self.scrib_paths[idx])
+        scrib = imread_gray(self.scrib_paths[idx])
         mask = imread_gray(self.mask_paths[idx]) if self.mask_dir else None
 
         scrib = np.where((scrib==2)|(scrib==255), 255, scrib).astype(np.uint8)

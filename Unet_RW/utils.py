@@ -151,9 +151,6 @@ def crf_refine(img, prob):
 
 def build_train_tfms(size: int):
     return A.Compose([
-        A.LongestMaxSize(max_size=size),
-        A.PadIfNeeded(size, size, border_mode=cv2.BORDER_CONSTANT, value=0),
-
         A.HorizontalFlip(p=0.5),
         A.RandomRotate90(p=0.2),
 
@@ -161,19 +158,6 @@ def build_train_tfms(size: int):
             shift_limit=0.02, scale_limit=0.05, rotate_limit=5,
             border_mode=cv2.BORDER_CONSTANT, value=0, mask_value=0, p=0.3
         ),
-
-        # A.OneOf([
-        #     A.ElasticTransform(alpha=10, sigma=2, alpha_affine=5,
-        #                        border_mode=cv2.BORDER_CONSTANT, value=0, mask_value=0, p=0.5),
-        #     A.GridDistortion(num_steps=5, distort_limit=0.1,
-        #                      border_mode=cv2.BORDER_CONSTANT, value=0, mask_value=0, p=0.5),
-        # ], p=0.2),
-
-        A.ColorJitter(brightness=0.25, contrast=0.25, saturation=0.2, hue=0.02, p=0.3),
-
-        # A.OneOf([
-        #     A.GaussianBlur(blur_limit=(3, 3), p=1.0),
-        # ], p=0.1),
 
         A.Normalize(),
         ToTensorV2(),

@@ -12,8 +12,8 @@ from .random_walk import rw_proba
 from .loss import MaskedBCEDice
 from .U_net import UNet
 
-import warnings
-warnings.filterwarnings("ignore")
+# import warnings
+# warnings.filterwarnings("ignore")
 
 HAS_CRF = False
 try:
@@ -27,7 +27,7 @@ except Exception as e:
 def train(args):
     set_seed(args.seed)
     device = 'mps' if torch.mps.is_available() else 'cuda' if torch.cuda.is_available() else 'cpu'
-
+    
     ds = ScribbleDataset(os.path.join(args.data, 'train/images'),
                          os.path.join(args.data, 'train/scribbles'),
                          os.path.join(args.data, 'train/ground_truth'),
@@ -252,8 +252,8 @@ def main():
     parser.add_argument('--crf', action='store_true')
     args = parser.parse_args()
     if args.mode=='train':
-        # train(args)
-        train_hybrid(args)
+        train(args)
+        # train_hybrid(args)
     else:
         infer(args)
 
