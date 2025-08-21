@@ -153,21 +153,27 @@ def build_train_tfms(size: int):
     return A.Compose([
         A.LongestMaxSize(max_size=size),
         A.PadIfNeeded(size, size, border_mode=cv2.BORDER_CONSTANT, value=0),
+
         A.HorizontalFlip(p=0.5),
         A.RandomRotate90(p=0.2),
-        A.ShiftScaleRotate(shift_limit=0.02, scale_limit=0.1, rotate_limit=10,
-                            border_mode=cv2.BORDER_CONSTANT, value=0, mask_value=0, p=0.35),
-        A.OneOf([
-            A.ElasticTransform(alpha=25, sigma=3, alpha_affine=10, border_mode=cv2.BORDER_CONSTANT, value=0, mask_value=0, p=0.5),
-            A.GridDistortion(num_steps=5, distort_limit=0.2, border_mode=cv2.BORDER_CONSTANT, value=0, mask_value=0, p=0.5),
-        ], p=0.3),
+
+        A.ShiftScaleRotate(
+            shift_limit=0.02, scale_limit=0.05, rotate_limit=5,
+            border_mode=cv2.BORDER_CONSTANT, value=0, mask_value=0, p=0.3
+        ),
+
+        # A.OneOf([
+        #     A.ElasticTransform(alpha=10, sigma=2, alpha_affine=5,
+        #                        border_mode=cv2.BORDER_CONSTANT, value=0, mask_value=0, p=0.5),
+        #     A.GridDistortion(num_steps=5, distort_limit=0.1,
+        #                      border_mode=cv2.BORDER_CONSTANT, value=0, mask_value=0, p=0.5),
+        # ], p=0.2),
 
         A.ColorJitter(brightness=0.25, contrast=0.25, saturation=0.2, hue=0.02, p=0.3),
-        A.OneOf([
-            A.GaussianBlur(blur_limit=(3,5), p=1.0),
-            A.GlassBlur(max_delta=1, iterations=1, p=1.0),
-        ], p=0.15),
-        A.GaussNoise(var_limit=(5.0, 25.0), p=0.2),
+
+        # A.OneOf([
+        #     A.GaussianBlur(blur_limit=(3, 3), p=1.0),
+        # ], p=0.1),
 
         A.Normalize(),
         ToTensorV2(),
@@ -177,14 +183,22 @@ def build_train_tfms(size: int):
         "gt": "mask",
     })
 
-def build_val_tfms(size: int):
-    return A.Compose([
-        A.LongestMaxSize(max_size=size),
-        A.PadIfNeeded(size, size, border_mode=cv2.BORDER_CONSTANT, value=0),
-        A.Normalize(),
-        ToTensorV2(),
-    ],
-    additional_targets={
-        "scribble": "mask",
-        "gt": "mask",
-    })
+def build_val_tfms(size: int): 
+    return A.Compose([ 
+        A.LongestMaxSize(max_size=size), 
+        A.PadIfNeeded(size, size, border_mode=cv2.BORDER_CONSTANT, value=0), 
+        A.Normalize(), ToTensorV2()],
+        additional_targets={ "scribble": "mask", "gt": "mask", })
+
+def clean_images(input_dir, output_dir):
+    os.makedirs(output_dir, exist_ok=True)
+    for fname in os.listdir(input_dir):
+        if fname.lower().endswith((".png", ".jpg", ".jpeg")):
+            fpath = os.path.join(input_dir, fname)
+            outpath = os.path.join(output_dir, fname)
+            with Image.open(fpath) as im:
+                # Convert to RGB to avoid profile persistence
+                im = im.convert("RGB")
+                # Save WITHOUT icc_profile metadata
+                im.save(outpath, "PNG", icc_profile=None)
+

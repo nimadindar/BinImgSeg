@@ -5,11 +5,15 @@ import torch
 
 import os, glob, argparse, random, cv2, numpy as np
 
-from .utils import set_seed, make_confidence_mask, evaluate_split_confusion, crf_refine, save_mask, build_train_tfms, build_val_tfms, imread
+from .utils import set_seed, make_confidence_mask, evaluate_split_confusion, \
+                    crf_refine, save_mask, build_train_tfms, build_val_tfms, imread
 from .custom_dataset import ScribbleDataset, HybridTrainDataset, ValProxy
 from .random_walk import rw_proba
 from .loss import MaskedBCEDice
 from .U_net import UNet
+
+import warnings
+warnings.filterwarnings("ignore")
 
 HAS_CRF = False
 try:
@@ -124,7 +128,7 @@ def train_hybrid(args,
         os.path.join(args.data, 'train/scribbles'),
         os.path.join(args.data, 'train/ground_truth'),
         tfms_train,
-        exts=(args.ext,) if hasattr(args, "ext") else (".png",".jpg",".jpeg")
+        exts=(args.ext,) if hasattr(args, "ext") else (".png",".jpg",".jpeg"),
     )
 
     n_val = max(1, int(0.15*len(ds_full)))
@@ -133,7 +137,7 @@ def train_hybrid(args,
     train_idx = [i for i in idxs if i not in val_idx]
 
     ds_tr = Subset(ds_full, train_idx)
-    ds_va = ValProxy(ds_full, list(val_idx), tfms_val)
+    ds_va = ValProxy(ds_full, list(val_idx),tfms_val)
 
     num_workers = 0 if device == 'mps' else 2
     pin_mem = True if device == 'cuda' else False
@@ -144,7 +148,7 @@ def train_hybrid(args,
                        num_workers=0, pin_memory=pin_mem)
 
     model = UNet(ch=args.width).to(device)
-    opt = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=1e-4)
+    opt = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=1e-4)
     lossf = MaskedBCEDice()
 
     best = 0.0; patience = 0
