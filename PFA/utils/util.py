@@ -15,7 +15,7 @@ from torch.utils.data import DataLoader
 import random
 
 from .tools import *
-from custom_dataset import ScribbleSegDataset
+from Unet_RW.custom_dataset import ScribbleSegDataset
 
 
 def data_loader(train, args):
