@@ -3,3 +3,4 @@ dataset
 log.txt
 *.png
 *.jpg
+*.pt
