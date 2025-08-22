@@ -178,7 +178,7 @@ def evaluate_robustness(args):
 
 
 def main():
-    folder = "outputs_unet_hybrid_wo_outlier"
+    folder = "outputs_unet_rw"
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", type=str, default="dataset")
     ap.add_argument("--out", type=str, default=f"Unet_RW/{folder}")           
