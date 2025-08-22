@@ -102,7 +102,7 @@ def train(args):
 
 
 def train_hybrid(args,
-                 lambda_rw: float = 0.2,
+                 lambda_rw: float = 0.1,
                  hi: float = 0.9,
                  lo: float = 0.1):
     """
@@ -234,17 +234,17 @@ def infer(args):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data', type=str, default='data')
-    parser.add_argument('--out', type=str, default='outputs')
-    parser.add_argument('--save', type=str, default='preds')
-    parser.add_argument('--mode', type=str, choices=['train','infer'], default='train')
+    parser.add_argument('--data', type=str, default='dataset')
+    parser.add_argument('--out', type=str, default='outputs_unet_hybrid_wo_outlier')
+    parser.add_argument('--save', type=str, default='outputs_unet_hybrid_wo_outlier/preds')
+    parser.add_argument('--mode', type=str, choices=['train','infer'], default='pred')
     parser.add_argument('--size', type=int, default=384)
     parser.add_argument('--bs', type=int, default=4)
-    parser.add_argument('--epochs', type=int, default=60)
+    parser.add_argument('--epochs', type=int, default=80)
     parser.add_argument('--early_stop', type=int, default=15)
-    parser.add_argument('--width', type=int, default=32)
-    parser.add_argument('--lr', type=float, default=3e-4)
-    parser.add_argument('--rw_beta', type=float, default=130.0)
+    parser.add_argument('--width', type=int, default=8)
+    parser.add_argument('--lr', type=float, default=1e-5)
+    parser.add_argument('--rw_beta', type=float, default=60.0)
     parser.add_argument('--pl_hi', type=float, default=0.9)
     parser.add_argument('--pl_lo', type=float, default=0.1)
     parser.add_argument('--ext', type=str, default='.png')

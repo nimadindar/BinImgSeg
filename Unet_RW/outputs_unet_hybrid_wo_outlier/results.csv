@@ -1,0 +1,240 @@
+Val confusion matrix [[tn, fp], [fn, tp]]: [[4220760, 192145], [551372, 49227]]
+Val metrics: {'tp': 49227, 'fp': 192145, 'fn': 551372, 'tn': 4220760, 'accuracy': 0.8517, 'precision': 0.2039, 'recall': 0.082, 'f1': 0.1169, 'dice_fg': 0.1169, 'iou_fg': 0.0621, 'iou_bg': 0.8502, 'miou': 0.4562}
+Epoch 1: val mIoU=0.2776 best=0.2776 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[4138269, 274636], [527599, 73000]]
+Val metrics: {'tp': 73000, 'fp': 274636, 'fn': 527599, 'tn': 4138269, 'accuracy': 0.84, 'precision': 0.21, 'recall': 0.1215, 'f1': 0.154, 'dice_fg': 0.154, 'iou_fg': 0.0834, 'iou_bg': 0.8376, 'miou': 0.4605}
+Epoch 2: val mIoU=0.2866 best=0.2866 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[4116431, 296474], [524535, 76064]]
+Val metrics: {'tp': 76064, 'fp': 296474, 'fn': 524535, 'tn': 4116431, 'accuracy': 0.8362, 'precision': 0.2042, 'recall': 0.1266, 'f1': 0.1563, 'dice_fg': 0.1563, 'iou_fg': 0.0848, 'iou_bg': 0.8337, 'miou': 0.4593}
+Epoch 3: val mIoU=0.2913 best=0.2913 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[4092671, 320234], [519408, 81191]]
+Val metrics: {'tp': 81191, 'fp': 320234, 'fn': 519408, 'tn': 4092671, 'accuracy': 0.8325, 'precision': 0.2023, 'recall': 0.1352, 'f1': 0.1621, 'dice_fg': 0.1621, 'iou_fg': 0.0882, 'iou_bg': 0.8298, 'miou': 0.459}
+Epoch 4: val mIoU=0.2975 best=0.2975 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[4093315, 319590], [520271, 80328]]
+Val metrics: {'tp': 80328, 'fp': 319590, 'fn': 520271, 'tn': 4093315, 'accuracy': 0.8325, 'precision': 0.2009, 'recall': 0.1337, 'f1': 0.1606, 'dice_fg': 0.1606, 'iou_fg': 0.0873, 'iou_bg': 0.8298, 'miou': 0.4585}
+Epoch 5: val mIoU=0.3085 best=0.3085 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[4026880, 386025], [504045, 96554]]
+Val metrics: {'tp': 96554, 'fp': 386025, 'fn': 504045, 'tn': 4026880, 'accuracy': 0.8225, 'precision': 0.2001, 'recall': 0.1608, 'f1': 0.1783, 'dice_fg': 0.1783, 'iou_fg': 0.0979, 'iou_bg': 0.819, 'miou': 0.4584}
+Epoch 6: val mIoU=0.3111 best=0.3111 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[4057737, 355168], [510263, 90336]]
+Val metrics: {'tp': 90336, 'fp': 355168, 'fn': 510263, 'tn': 4057737, 'accuracy': 0.8274, 'precision': 0.2028, 'recall': 0.1504, 'f1': 0.1727, 'dice_fg': 0.1727, 'iou_fg': 0.0945, 'iou_bg': 0.8242, 'miou': 0.4594}
+Epoch 7: val mIoU=0.3263 best=0.3263 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[4042135, 370770], [505335, 95264]]
+Val metrics: {'tp': 95264, 'fp': 370770, 'fn': 505335, 'tn': 4042135, 'accuracy': 0.8253, 'precision': 0.2044, 'recall': 0.1586, 'f1': 0.1786, 'dice_fg': 0.1786, 'iou_fg': 0.0981, 'iou_bg': 0.8219, 'miou': 0.46}
+Epoch 8: val mIoU=0.3269 best=0.3269 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[4018886, 394019], [494204, 106395]]
+Val metrics: {'tp': 106395, 'fp': 394019, 'fn': 494204, 'tn': 4018886, 'accuracy': 0.8228, 'precision': 0.2126, 'recall': 0.1771, 'f1': 0.1933, 'dice_fg': 0.1933, 'iou_fg': 0.107, 'iou_bg': 0.819, 'miou': 0.463}
+Epoch 9: val mIoU=0.3334 best=0.3334 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3976731, 436174], [483678, 116921]]
+Val metrics: {'tp': 116921, 'fp': 436174, 'fn': 483678, 'tn': 3976731, 'accuracy': 0.8165, 'precision': 0.2114, 'recall': 0.1947, 'f1': 0.2027, 'dice_fg': 0.2027, 'iou_fg': 0.1128, 'iou_bg': 0.8121, 'miou': 0.4625}
+Epoch 10: val mIoU=0.3321 best=0.3334 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[4010495, 402410], [491706, 108893]]
+Val metrics: {'tp': 108893, 'fp': 402410, 'fn': 491706, 'tn': 4010495, 'accuracy': 0.8217, 'precision': 0.213, 'recall': 0.1813, 'f1': 0.1959, 'dice_fg': 0.1959, 'iou_fg': 0.1086, 'iou_bg': 0.8177, 'miou': 0.4631}
+Epoch 11: val mIoU=0.3373 best=0.3373 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3948654, 464251], [476776, 123823]]
+Val metrics: {'tp': 123823, 'fp': 464251, 'fn': 476776, 'tn': 3948654, 'accuracy': 0.8123, 'precision': 0.2106, 'recall': 0.2062, 'f1': 0.2083, 'dice_fg': 0.2083, 'iou_fg': 0.1163, 'iou_bg': 0.8075, 'miou': 0.4619}
+Epoch 12: val mIoU=0.3295 best=0.3373 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3966227, 446678], [477834, 122765]]
+Val metrics: {'tp': 122765, 'fp': 446678, 'fn': 477834, 'tn': 3966227, 'accuracy': 0.8156, 'precision': 0.2156, 'recall': 0.2044, 'f1': 0.2098, 'dice_fg': 0.2098, 'iou_fg': 0.1172, 'iou_bg': 0.811, 'miou': 0.4641}
+Epoch 13: val mIoU=0.3356 best=0.3373 patience=2
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3942725, 470180], [469416, 131183]]
+Val metrics: {'tp': 131183, 'fp': 470180, 'fn': 469416, 'tn': 3942725, 'accuracy': 0.8126, 'precision': 0.2181, 'recall': 0.2184, 'f1': 0.2183, 'dice_fg': 0.2183, 'iou_fg': 0.1225, 'iou_bg': 0.8076, 'miou': 0.465}
+Epoch 14: val mIoU=0.3425 best=0.3425 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3966165, 446740], [473740, 126859]]
+Val metrics: {'tp': 126859, 'fp': 446740, 'fn': 473740, 'tn': 3966165, 'accuracy': 0.8164, 'precision': 0.2212, 'recall': 0.2112, 'f1': 0.2161, 'dice_fg': 0.2161, 'iou_fg': 0.1211, 'iou_bg': 0.8116, 'miou': 0.4664}
+Epoch 15: val mIoU=0.3478 best=0.3478 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3860372, 552533], [450504, 150095]]
+Val metrics: {'tp': 150095, 'fp': 552533, 'fn': 450504, 'tn': 3860372, 'accuracy': 0.7999, 'precision': 0.2136, 'recall': 0.2499, 'f1': 0.2303, 'dice_fg': 0.2303, 'iou_fg': 0.1302, 'iou_bg': 0.7938, 'miou': 0.462}
+Epoch 16: val mIoU=0.3368 best=0.3478 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3849010, 563895], [448517, 152082]]
+Val metrics: {'tp': 152082, 'fp': 563895, 'fn': 448517, 'tn': 3849010, 'accuracy': 0.7981, 'precision': 0.2124, 'recall': 0.2532, 'f1': 0.231, 'dice_fg': 0.231, 'iou_fg': 0.1306, 'iou_bg': 0.7917, 'miou': 0.4612}
+Epoch 17: val mIoU=0.3415 best=0.3478 patience=2
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3844232, 568673], [443573, 157026]]
+Val metrics: {'tp': 157026, 'fp': 568673, 'fn': 443573, 'tn': 3844232, 'accuracy': 0.7981, 'precision': 0.2164, 'recall': 0.2614, 'f1': 0.2368, 'dice_fg': 0.2368, 'iou_fg': 0.1343, 'iou_bg': 0.7916, 'miou': 0.4629}
+Epoch 18: val mIoU=0.3442 best=0.3478 patience=3
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3860711, 552194], [444572, 156027]]
+Val metrics: {'tp': 156027, 'fp': 552194, 'fn': 444572, 'tn': 3860711, 'accuracy': 0.8012, 'precision': 0.2203, 'recall': 0.2598, 'f1': 0.2384, 'dice_fg': 0.2384, 'iou_fg': 0.1353, 'iou_bg': 0.7948, 'miou': 0.4651}
+Epoch 19: val mIoU=0.3475 best=0.3478 patience=4
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3764019, 648886], [418763, 181836]]
+Val metrics: {'tp': 181836, 'fp': 648886, 'fn': 418763, 'tn': 3764019, 'accuracy': 0.787, 'precision': 0.2189, 'recall': 0.3028, 'f1': 0.2541, 'dice_fg': 0.2541, 'iou_fg': 0.1455, 'iou_bg': 0.779, 'miou': 0.4623}
+Epoch 20: val mIoU=0.3375 best=0.3478 patience=5
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3737537, 675368], [407516, 193083]]
+Val metrics: {'tp': 193083, 'fp': 675368, 'fn': 407516, 'tn': 3737537, 'accuracy': 0.784, 'precision': 0.2223, 'recall': 0.3215, 'f1': 0.2629, 'dice_fg': 0.2629, 'iou_fg': 0.1513, 'iou_bg': 0.7754, 'miou': 0.4633}
+Epoch 21: val mIoU=0.3434 best=0.3478 patience=6
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3784999, 627906], [416893, 183706]]
+Val metrics: {'tp': 183706, 'fp': 627906, 'fn': 416893, 'tn': 3784999, 'accuracy': 0.7916, 'precision': 0.2263, 'recall': 0.3059, 'f1': 0.2602, 'dice_fg': 0.2602, 'iou_fg': 0.1495, 'iou_bg': 0.7837, 'miou': 0.4666}
+Epoch 22: val mIoU=0.3436 best=0.3478 patience=7
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3718946, 693959], [392282, 208317]]
+Val metrics: {'tp': 208317, 'fp': 693959, 'fn': 392282, 'tn': 3718946, 'accuracy': 0.7833, 'precision': 0.2309, 'recall': 0.3468, 'f1': 0.2772, 'dice_fg': 0.2772, 'iou_fg': 0.1609, 'iou_bg': 0.7739, 'miou': 0.4674}
+Epoch 23: val mIoU=0.3477 best=0.3478 patience=8
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3868117, 544788], [415231, 185368]]
+Val metrics: {'tp': 185368, 'fp': 544788, 'fn': 415231, 'tn': 3868117, 'accuracy': 0.8085, 'precision': 0.2539, 'recall': 0.3086, 'f1': 0.2786, 'dice_fg': 0.2786, 'iou_fg': 0.1618, 'iou_bg': 0.8012, 'miou': 0.4815}
+Epoch 24: val mIoU=0.3715 best=0.3715 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3837965, 574940], [405400, 195199]]
+Val metrics: {'tp': 195199, 'fp': 574940, 'fn': 405400, 'tn': 3837965, 'accuracy': 0.8045, 'precision': 0.2535, 'recall': 0.325, 'f1': 0.2848, 'dice_fg': 0.2848, 'iou_fg': 0.1661, 'iou_bg': 0.7965, 'miou': 0.4813}
+Epoch 25: val mIoU=0.3747 best=0.3747 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3756907, 655998], [377478, 223121]]
+Val metrics: {'tp': 223121, 'fp': 655998, 'fn': 377478, 'tn': 3756907, 'accuracy': 0.7939, 'precision': 0.2538, 'recall': 0.3715, 'f1': 0.3016, 'dice_fg': 0.3016, 'iou_fg': 0.1776, 'iou_bg': 0.7843, 'miou': 0.4809}
+Epoch 26: val mIoU=0.3718 best=0.3747 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3813531, 599374], [371768, 228831]]
+Val metrics: {'tp': 228831, 'fp': 599374, 'fn': 371768, 'tn': 3813531, 'accuracy': 0.8063, 'precision': 0.2763, 'recall': 0.381, 'f1': 0.3203, 'dice_fg': 0.3203, 'iou_fg': 0.1907, 'iou_bg': 0.797, 'miou': 0.4939}
+Epoch 27: val mIoU=0.3831 best=0.3831 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3797080, 615825], [367517, 233082]]
+Val metrics: {'tp': 233082, 'fp': 615825, 'fn': 367517, 'tn': 3797080, 'accuracy': 0.8039, 'precision': 0.2746, 'recall': 0.3881, 'f1': 0.3216, 'dice_fg': 0.3216, 'iou_fg': 0.1916, 'iou_bg': 0.7943, 'miou': 0.493}
+Epoch 28: val mIoU=0.3884 best=0.3884 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3865379, 547526], [378927, 221672]]
+Val metrics: {'tp': 221672, 'fp': 547526, 'fn': 378927, 'tn': 3865379, 'accuracy': 0.8152, 'precision': 0.2882, 'recall': 0.3691, 'f1': 0.3237, 'dice_fg': 0.3237, 'iou_fg': 0.1931, 'iou_bg': 0.8067, 'miou': 0.4999}
+Epoch 29: val mIoU=0.3977 best=0.3977 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3902019, 510886], [377463, 223136]]
+Val metrics: {'tp': 223136, 'fp': 510886, 'fn': 377463, 'tn': 3902019, 'accuracy': 0.8228, 'precision': 0.304, 'recall': 0.3715, 'f1': 0.3344, 'dice_fg': 0.3344, 'iou_fg': 0.2008, 'iou_bg': 0.8146, 'miou': 0.5077}
+Epoch 30: val mIoU=0.4143 best=0.4143 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[4002239, 410666], [410208, 190391]]
+Val metrics: {'tp': 190391, 'fp': 410666, 'fn': 410208, 'tn': 4002239, 'accuracy': 0.8363, 'precision': 0.3168, 'recall': 0.317, 'f1': 0.3169, 'dice_fg': 0.3169, 'iou_fg': 0.1883, 'iou_bg': 0.8298, 'miou': 0.509}
+Epoch 31: val mIoU=0.4323 best=0.4323 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3832677, 580228], [340391, 260208]]
+Val metrics: {'tp': 260208, 'fp': 580228, 'fn': 340391, 'tn': 3832677, 'accuracy': 0.8164, 'precision': 0.3096, 'recall': 0.4332, 'f1': 0.3611, 'dice_fg': 0.3611, 'iou_fg': 0.2204, 'iou_bg': 0.8063, 'miou': 0.5133}
+Epoch 32: val mIoU=0.4204 best=0.4323 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3918759, 494146], [368045, 232554]]
+Val metrics: {'tp': 232554, 'fp': 494146, 'fn': 368045, 'tn': 3918759, 'accuracy': 0.828, 'precision': 0.32, 'recall': 0.3872, 'f1': 0.3504, 'dice_fg': 0.3504, 'iou_fg': 0.2124, 'iou_bg': 0.8197, 'miou': 0.516}
+Epoch 33: val mIoU=0.4257 best=0.4323 patience=2
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3713174, 699731], [300511, 300088]]
+Val metrics: {'tp': 300088, 'fp': 699731, 'fn': 300511, 'tn': 3713174, 'accuracy': 0.8005, 'precision': 0.3001, 'recall': 0.4996, 'f1': 0.375, 'dice_fg': 0.375, 'iou_fg': 0.2308, 'iou_bg': 0.7878, 'miou': 0.5093}
+Epoch 34: val mIoU=0.4139 best=0.4323 patience=3
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3952540, 460365], [361858, 238741]]
+Val metrics: {'tp': 238741, 'fp': 460365, 'fn': 361858, 'tn': 3952540, 'accuracy': 0.836, 'precision': 0.3415, 'recall': 0.3975, 'f1': 0.3674, 'dice_fg': 0.3674, 'iou_fg': 0.225, 'iou_bg': 0.8278, 'miou': 0.5264}
+Epoch 35: val mIoU=0.4403 best=0.4403 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3894066, 518839], [341564, 259035]]
+Val metrics: {'tp': 259035, 'fp': 518839, 'fn': 341564, 'tn': 3894066, 'accuracy': 0.8284, 'precision': 0.333, 'recall': 0.4313, 'f1': 0.3758, 'dice_fg': 0.3758, 'iou_fg': 0.2314, 'iou_bg': 0.819, 'miou': 0.5252}
+Epoch 36: val mIoU=0.4484 best=0.4484 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3662443, 750462], [268106, 332493]]
+Val metrics: {'tp': 332493, 'fp': 750462, 'fn': 268106, 'tn': 3662443, 'accuracy': 0.7968, 'precision': 0.307, 'recall': 0.5536, 'f1': 0.395, 'dice_fg': 0.395, 'iou_fg': 0.2461, 'iou_bg': 0.7824, 'miou': 0.5143}
+Epoch 37: val mIoU=0.4124 best=0.4484 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3753219, 659686], [291283, 309316]]
+Val metrics: {'tp': 309316, 'fp': 659686, 'fn': 291283, 'tn': 3753219, 'accuracy': 0.8103, 'precision': 0.3192, 'recall': 0.515, 'f1': 0.3941, 'dice_fg': 0.3941, 'iou_fg': 0.2454, 'iou_bg': 0.7978, 'miou': 0.5216}
+Epoch 38: val mIoU=0.4330 best=0.4484 patience=2
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3709251, 703654], [271775, 328824]]
+Val metrics: {'tp': 328824, 'fp': 703654, 'fn': 271775, 'tn': 3709251, 'accuracy': 0.8054, 'precision': 0.3185, 'recall': 0.5475, 'f1': 0.4027, 'dice_fg': 0.4027, 'iou_fg': 0.2521, 'iou_bg': 0.7918, 'miou': 0.5219}
+Epoch 39: val mIoU=0.4303 best=0.4484 patience=3
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3791746, 621159], [284790, 315809]]
+Val metrics: {'tp': 315809, 'fp': 621159, 'fn': 284790, 'tn': 3791746, 'accuracy': 0.8193, 'precision': 0.3371, 'recall': 0.5258, 'f1': 0.4108, 'dice_fg': 0.4108, 'iou_fg': 0.2585, 'iou_bg': 0.8072, 'miou': 0.5328}
+Epoch 40: val mIoU=0.4456 best=0.4484 patience=4
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3946629, 466276], [351737, 248862]]
+Val metrics: {'tp': 248862, 'fp': 466276, 'fn': 351737, 'tn': 3946629, 'accuracy': 0.8368, 'precision': 0.348, 'recall': 0.4144, 'f1': 0.3783, 'dice_fg': 0.3783, 'iou_fg': 0.2333, 'iou_bg': 0.8283, 'miou': 0.5308}
+Epoch 41: val mIoU=0.4666 best=0.4666 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3668705, 744200], [265694, 334905]]
+Val metrics: {'tp': 334905, 'fp': 744200, 'fn': 265694, 'tn': 3668705, 'accuracy': 0.7986, 'precision': 0.3104, 'recall': 0.5576, 'f1': 0.3988, 'dice_fg': 0.3988, 'iou_fg': 0.249, 'iou_bg': 0.7841, 'miou': 0.5166}
+Epoch 42: val mIoU=0.4410 best=0.4666 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3843393, 569512], [306648, 293951]]
+Val metrics: {'tp': 293951, 'fp': 569512, 'fn': 306648, 'tn': 3843393, 'accuracy': 0.8252, 'precision': 0.3404, 'recall': 0.4894, 'f1': 0.4016, 'dice_fg': 0.4016, 'iou_fg': 0.2512, 'iou_bg': 0.8144, 'miou': 0.5328}
+Epoch 43: val mIoU=0.4600 best=0.4666 patience=2
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3874881, 538024], [313825, 286774]]
+Val metrics: {'tp': 286774, 'fp': 538024, 'fn': 313825, 'tn': 3874881, 'accuracy': 0.8301, 'precision': 0.3477, 'recall': 0.4775, 'f1': 0.4024, 'dice_fg': 0.4024, 'iou_fg': 0.2519, 'iou_bg': 0.8198, 'miou': 0.5358}
+Epoch 44: val mIoU=0.4621 best=0.4666 patience=3
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3906534, 506371], [322178, 278421]]
+Val metrics: {'tp': 278421, 'fp': 506371, 'fn': 322178, 'tn': 3906534, 'accuracy': 0.8347, 'precision': 0.3548, 'recall': 0.4636, 'f1': 0.4019, 'dice_fg': 0.4019, 'iou_fg': 0.2515, 'iou_bg': 0.825, 'miou': 0.5383}
+Epoch 45: val mIoU=0.4690 best=0.4690 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3886308, 526597], [316457, 284142]]
+Val metrics: {'tp': 284142, 'fp': 526597, 'fn': 316457, 'tn': 3886308, 'accuracy': 0.8318, 'precision': 0.3505, 'recall': 0.4731, 'f1': 0.4027, 'dice_fg': 0.4027, 'iou_fg': 0.2521, 'iou_bg': 0.8217, 'miou': 0.5369}
+Epoch 46: val mIoU=0.4704 best=0.4704 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3814766, 598139], [290095, 310504]]
+Val metrics: {'tp': 310504, 'fp': 598139, 'fn': 290095, 'tn': 3814766, 'accuracy': 0.8228, 'precision': 0.3417, 'recall': 0.517, 'f1': 0.4115, 'dice_fg': 0.4115, 'iou_fg': 0.259, 'iou_bg': 0.8111, 'miou': 0.5351}
+Epoch 47: val mIoU=0.4681 best=0.4704 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3903718, 509187], [322064, 278535]]
+Val metrics: {'tp': 278535, 'fp': 509187, 'fn': 322064, 'tn': 3903718, 'accuracy': 0.8342, 'precision': 0.3536, 'recall': 0.4638, 'f1': 0.4013, 'dice_fg': 0.4013, 'iou_fg': 0.251, 'iou_bg': 0.8244, 'miou': 0.5377}
+Epoch 48: val mIoU=0.4745 best=0.4745 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3935096, 477809], [319646, 280953]]
+Val metrics: {'tp': 280953, 'fp': 477809, 'fn': 319646, 'tn': 3935096, 'accuracy': 0.8409, 'precision': 0.3703, 'recall': 0.4678, 'f1': 0.4134, 'dice_fg': 0.4134, 'iou_fg': 0.2605, 'iou_bg': 0.8315, 'miou': 0.546}
+Epoch 49: val mIoU=0.4878 best=0.4878 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3908267, 504638], [305190, 295409]]
+Val metrics: {'tp': 295409, 'fp': 504638, 'fn': 305190, 'tn': 3908267, 'accuracy': 0.8385, 'precision': 0.3692, 'recall': 0.4919, 'f1': 0.4218, 'dice_fg': 0.4218, 'iou_fg': 0.2673, 'iou_bg': 0.8284, 'miou': 0.5478}
+Epoch 50: val mIoU=0.4761 best=0.4878 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3849865, 563040], [275472, 325127]]
+Val metrics: {'tp': 325127, 'fp': 563040, 'fn': 275472, 'tn': 3849865, 'accuracy': 0.8327, 'precision': 0.3661, 'recall': 0.5413, 'f1': 0.4368, 'dice_fg': 0.4368, 'iou_fg': 0.2794, 'iou_bg': 0.8212, 'miou': 0.5503}
+Epoch 51: val mIoU=0.4866 best=0.4878 patience=2
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3792169, 620736], [264217, 336382]]
+Val metrics: {'tp': 336382, 'fp': 620736, 'fn': 264217, 'tn': 3792169, 'accuracy': 0.8235, 'precision': 0.3515, 'recall': 0.5601, 'f1': 0.4319, 'dice_fg': 0.4319, 'iou_fg': 0.2754, 'iou_bg': 0.8108, 'miou': 0.5431}
+Epoch 52: val mIoU=0.4725 best=0.4878 patience=3
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3842146, 570759], [288673, 311926]]
+Val metrics: {'tp': 311926, 'fp': 570759, 'fn': 288673, 'tn': 3842146, 'accuracy': 0.8286, 'precision': 0.3534, 'recall': 0.5194, 'f1': 0.4206, 'dice_fg': 0.4206, 'iou_fg': 0.2663, 'iou_bg': 0.8172, 'miou': 0.5417}
+Epoch 53: val mIoU=0.4855 best=0.4878 patience=4
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3842263, 570642], [275632, 324967]]
+Val metrics: {'tp': 324967, 'fp': 570642, 'fn': 275632, 'tn': 3842263, 'accuracy': 0.8312, 'precision': 0.3628, 'recall': 0.5411, 'f1': 0.4344, 'dice_fg': 0.4344, 'iou_fg': 0.2775, 'iou_bg': 0.8195, 'miou': 0.5485}
+Epoch 54: val mIoU=0.4826 best=0.4878 patience=5
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3899926, 512979], [293099, 307500]]
+Val metrics: {'tp': 307500, 'fp': 512979, 'fn': 293099, 'tn': 3899926, 'accuracy': 0.8392, 'precision': 0.3748, 'recall': 0.512, 'f1': 0.4328, 'dice_fg': 0.4328, 'iou_fg': 0.2761, 'iou_bg': 0.8287, 'miou': 0.5524}
+Epoch 55: val mIoU=0.4928 best=0.4928 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3975774, 437131], [334690, 265909]]
+Val metrics: {'tp': 265909, 'fp': 437131, 'fn': 334690, 'tn': 3975774, 'accuracy': 0.8461, 'precision': 0.3782, 'recall': 0.4427, 'f1': 0.4079, 'dice_fg': 0.4079, 'iou_fg': 0.2562, 'iou_bg': 0.8374, 'miou': 0.5468}
+Epoch 56: val mIoU=0.5040 best=0.5040 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3671885, 741020], [228054, 372545]]
+Val metrics: {'tp': 372545, 'fp': 741020, 'fn': 228054, 'tn': 3671885, 'accuracy': 0.8067, 'precision': 0.3346, 'recall': 0.6203, 'f1': 0.4347, 'dice_fg': 0.4347, 'iou_fg': 0.2777, 'iou_bg': 0.7912, 'miou': 0.5344}
+Epoch 57: val mIoU=0.4707 best=0.5040 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3935732, 477173], [307337, 293262]]
+Val metrics: {'tp': 293262, 'fp': 477173, 'fn': 307337, 'tn': 3935732, 'accuracy': 0.8435, 'precision': 0.3806, 'recall': 0.4883, 'f1': 0.4278, 'dice_fg': 0.4278, 'iou_fg': 0.2721, 'iou_bg': 0.8338, 'miou': 0.5529}
+Epoch 58: val mIoU=0.5097 best=0.5097 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3879560, 533345], [281675, 318924]]
+Val metrics: {'tp': 318924, 'fp': 533345, 'fn': 281675, 'tn': 3879560, 'accuracy': 0.8374, 'precision': 0.3742, 'recall': 0.531, 'f1': 0.439, 'dice_fg': 0.439, 'iou_fg': 0.2813, 'iou_bg': 0.8264, 'miou': 0.5538}
+Epoch 59: val mIoU=0.5010 best=0.5097 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3965439, 447466], [323927, 276672]]
+Val metrics: {'tp': 276672, 'fp': 447466, 'fn': 323927, 'tn': 3965439, 'accuracy': 0.8461, 'precision': 0.3821, 'recall': 0.4607, 'f1': 0.4177, 'dice_fg': 0.4177, 'iou_fg': 0.264, 'iou_bg': 0.8372, 'miou': 0.5506}
+Epoch 60: val mIoU=0.5035 best=0.5097 patience=2
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3827889, 585016], [284482, 316117]]
+Val metrics: {'tp': 316117, 'fp': 585016, 'fn': 284482, 'tn': 3827889, 'accuracy': 0.8266, 'precision': 0.3508, 'recall': 0.5263, 'f1': 0.421, 'dice_fg': 0.421, 'iou_fg': 0.2666, 'iou_bg': 0.8149, 'miou': 0.5408}
+Epoch 61: val mIoU=0.4898 best=0.5097 patience=3
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3907089, 505816], [304396, 296203]]
+Val metrics: {'tp': 296203, 'fp': 505816, 'fn': 304396, 'tn': 3907089, 'accuracy': 0.8384, 'precision': 0.3693, 'recall': 0.4932, 'f1': 0.4224, 'dice_fg': 0.4224, 'iou_fg': 0.2677, 'iou_bg': 0.8282, 'miou': 0.548}
+Epoch 62: val mIoU=0.5116 best=0.5116 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3900045, 512860], [287541, 313058]]
+Val metrics: {'tp': 313058, 'fp': 512860, 'fn': 287541, 'tn': 3900045, 'accuracy': 0.8404, 'precision': 0.379, 'recall': 0.5212, 'f1': 0.4389, 'dice_fg': 0.4389, 'iou_fg': 0.2812, 'iou_bg': 0.8297, 'miou': 0.5554}
+Epoch 63: val mIoU=0.5046 best=0.5116 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3949043, 463862], [305652, 294947]]
+Val metrics: {'tp': 294947, 'fp': 463862, 'fn': 305652, 'tn': 3949043, 'accuracy': 0.8465, 'precision': 0.3887, 'recall': 0.4911, 'f1': 0.4339, 'dice_fg': 0.4339, 'iou_fg': 0.2771, 'iou_bg': 0.8369, 'miou': 0.557}
+Epoch 64: val mIoU=0.5158 best=0.5158 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3794123, 618782], [259127, 341472]]
+Val metrics: {'tp': 341472, 'fp': 618782, 'fn': 259127, 'tn': 3794123, 'accuracy': 0.8249, 'precision': 0.3556, 'recall': 0.5686, 'f1': 0.4375, 'dice_fg': 0.4375, 'iou_fg': 0.28, 'iou_bg': 0.8121, 'miou': 0.5461}
+Epoch 65: val mIoU=0.4910 best=0.5158 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3753839, 659066], [247293, 353306]]
+Val metrics: {'tp': 353306, 'fp': 659066, 'fn': 247293, 'tn': 3753839, 'accuracy': 0.8192, 'precision': 0.349, 'recall': 0.5883, 'f1': 0.4381, 'dice_fg': 0.4381, 'iou_fg': 0.2805, 'iou_bg': 0.8055, 'miou': 0.543}
+Epoch 66: val mIoU=0.4864 best=0.5158 patience=2
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3809414, 603491], [261376, 339223]]
+Val metrics: {'tp': 339223, 'fp': 603491, 'fn': 261376, 'tn': 3809414, 'accuracy': 0.8275, 'precision': 0.3598, 'recall': 0.5648, 'f1': 0.4396, 'dice_fg': 0.4396, 'iou_fg': 0.2817, 'iou_bg': 0.815, 'miou': 0.5483}
+Epoch 67: val mIoU=0.4953 best=0.5158 patience=3
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3989977, 422928], [315080, 285519]]
+Val metrics: {'tp': 285519, 'fp': 422928, 'fn': 315080, 'tn': 3989977, 'accuracy': 0.8528, 'precision': 0.403, 'recall': 0.4754, 'f1': 0.4362, 'dice_fg': 0.4362, 'iou_fg': 0.279, 'iou_bg': 0.8439, 'miou': 0.5614}
+Epoch 68: val mIoU=0.5241 best=0.5241 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3862792, 550113], [266518, 334081]]
+Val metrics: {'tp': 334081, 'fp': 550113, 'fn': 266518, 'tn': 3862792, 'accuracy': 0.8371, 'precision': 0.3778, 'recall': 0.5562, 'f1': 0.45, 'dice_fg': 0.45, 'iou_fg': 0.2903, 'iou_bg': 0.8255, 'miou': 0.5579}
+Epoch 69: val mIoU=0.4982 best=0.5241 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3818016, 594889], [255707, 344892]]
+Val metrics: {'tp': 344892, 'fp': 594889, 'fn': 255707, 'tn': 3818016, 'accuracy': 0.8303, 'precision': 0.367, 'recall': 0.5742, 'f1': 0.4478, 'dice_fg': 0.4478, 'iou_fg': 0.2885, 'iou_bg': 0.8178, 'miou': 0.5532}
+Epoch 70: val mIoU=0.4952 best=0.5241 patience=2
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3796391, 616514], [247179, 353420]]
+Val metrics: {'tp': 353420, 'fp': 616514, 'fn': 247179, 'tn': 3796391, 'accuracy': 0.8277, 'precision': 0.3644, 'recall': 0.5884, 'f1': 0.4501, 'dice_fg': 0.4501, 'iou_fg': 0.2904, 'iou_bg': 0.8147, 'miou': 0.5525}
+Epoch 71: val mIoU=0.4891 best=0.5241 patience=3
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3740762, 672143], [234944, 365655]]
+Val metrics: {'tp': 365655, 'fp': 672143, 'fn': 234944, 'tn': 3740762, 'accuracy': 0.8191, 'precision': 0.3523, 'recall': 0.6088, 'f1': 0.4464, 'dice_fg': 0.4464, 'iou_fg': 0.2873, 'iou_bg': 0.8048, 'miou': 0.5461}
+Epoch 72: val mIoU=0.4704 best=0.5241 patience=4
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3682149, 730756], [206307, 394292]]
+Val metrics: {'tp': 394292, 'fp': 730756, 'fn': 206307, 'tn': 3682149, 'accuracy': 0.8131, 'precision': 0.3505, 'recall': 0.6565, 'f1': 0.457, 'dice_fg': 0.457, 'iou_fg': 0.2962, 'iou_bg': 0.7971, 'miou': 0.5466}
+Epoch 73: val mIoU=0.4776 best=0.5241 patience=5
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3964666, 448239], [314152, 286447]]
+Val metrics: {'tp': 286447, 'fp': 448239, 'fn': 314152, 'tn': 3964666, 'accuracy': 0.8479, 'precision': 0.3899, 'recall': 0.4769, 'f1': 0.429, 'dice_fg': 0.429, 'iou_fg': 0.2731, 'iou_bg': 0.8387, 'miou': 0.5559}
+Epoch 74: val mIoU=0.5273 best=0.5273 patience=0
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3858344, 554561], [266082, 334517]]
+Val metrics: {'tp': 334517, 'fp': 554561, 'fn': 266082, 'tn': 3858344, 'accuracy': 0.8363, 'precision': 0.3763, 'recall': 0.557, 'f1': 0.4491, 'dice_fg': 0.4491, 'iou_fg': 0.2896, 'iou_bg': 0.8246, 'miou': 0.5571}
+Epoch 75: val mIoU=0.5023 best=0.5273 patience=1
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3829728, 583177], [253927, 346672]]
+Val metrics: {'tp': 346672, 'fp': 583177, 'fn': 253927, 'tn': 3829728, 'accuracy': 0.833, 'precision': 0.3728, 'recall': 0.5772, 'f1': 0.453, 'dice_fg': 0.453, 'iou_fg': 0.2929, 'iou_bg': 0.8206, 'miou': 0.5567}
+Epoch 76: val mIoU=0.5011 best=0.5273 patience=2
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3860028, 552877], [267796, 332803]]
+Val metrics: {'tp': 332803, 'fp': 552877, 'fn': 267796, 'tn': 3860028, 'accuracy': 0.8363, 'precision': 0.3758, 'recall': 0.5541, 'f1': 0.4478, 'dice_fg': 0.4478, 'iou_fg': 0.2885, 'iou_bg': 0.8247, 'miou': 0.5566}
+Epoch 77: val mIoU=0.4997 best=0.5273 patience=3
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3802057, 610848], [238697, 361902]]
+Val metrics: {'tp': 361902, 'fp': 610848, 'fn': 238697, 'tn': 3802057, 'accuracy': 0.8305, 'precision': 0.372, 'recall': 0.6026, 'f1': 0.46, 'dice_fg': 0.46, 'iou_fg': 0.2987, 'iou_bg': 0.8174, 'miou': 0.5581}
+Epoch 78: val mIoU=0.5035 best=0.5273 patience=4
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3822087, 590818], [256126, 344473]]
+Val metrics: {'tp': 344473, 'fp': 590818, 'fn': 256126, 'tn': 3822087, 'accuracy': 0.8311, 'precision': 0.3683, 'recall': 0.5735, 'f1': 0.4486, 'dice_fg': 0.4486, 'iou_fg': 0.2891, 'iou_bg': 0.8186, 'miou': 0.5539}
+Epoch 79: val mIoU=0.5057 best=0.5273 patience=5
+Val confusion matrix [[tn, fp], [fn, tp]]: [[3813047, 599858], [253272, 347327]]
+Val metrics: {'tp': 347327, 'fp': 599858, 'fn': 253272, 'tn': 3813047, 'accuracy': 0.8298, 'precision': 0.3667, 'recall': 0.5783, 'f1': 0.4488, 'dice_fg': 0.4488, 'iou_fg': 0.2893, 'iou_bg': 0.8172, 'miou': 0.5532}
+Epoch 80: val mIoU=0.4935 best=0.5273 patience=6
