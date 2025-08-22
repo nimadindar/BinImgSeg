@@ -1,0 +1,289 @@
+[t-SNE] Computing 31 nearest neighbors...
+[t-SNE] Indexed 60000 samples in 0.000s...
+[t-SNE] Computed neighbors for 60000 samples in 1.059s...
+[t-SNE] Computed conditional probabilities for sample 1000 / 60000
+[t-SNE] Computed conditional probabilities for sample 2000 / 60000
+[t-SNE] Computed conditional probabilities for sample 3000 / 60000
+[t-SNE] Computed conditional probabilities for sample 4000 / 60000
+[t-SNE] Computed conditional probabilities for sample 5000 / 60000
+[t-SNE] Computed conditional probabilities for sample 6000 / 60000
+[t-SNE] Computed conditional probabilities for sample 7000 / 60000
+[t-SNE] Computed conditional probabilities for sample 8000 / 60000
+[t-SNE] Computed conditional probabilities for sample 9000 / 60000
+[t-SNE] Computed conditional probabilities for sample 10000 / 60000
+[t-SNE] Computed conditional probabilities for sample 11000 / 60000
+[t-SNE] Computed conditional probabilities for sample 12000 / 60000
+[t-SNE] Computed conditional probabilities for sample 13000 / 60000
+[t-SNE] Computed conditional probabilities for sample 14000 / 60000
+[t-SNE] Computed conditional probabilities for sample 15000 / 60000
+[t-SNE] Computed conditional probabilities for sample 16000 / 60000
+[t-SNE] Computed conditional probabilities for sample 17000 / 60000
+[t-SNE] Computed conditional probabilities for sample 18000 / 60000
+[t-SNE] Computed conditional probabilities for sample 19000 / 60000
+[t-SNE] Computed conditional probabilities for sample 20000 / 60000
+[t-SNE] Computed conditional probabilities for sample 21000 / 60000
+[t-SNE] Computed conditional probabilities for sample 22000 / 60000
+[t-SNE] Computed conditional probabilities for sample 23000 / 60000
+[t-SNE] Computed conditional probabilities for sample 24000 / 60000
+[t-SNE] Computed conditional probabilities for sample 25000 / 60000
+[t-SNE] Computed conditional probabilities for sample 26000 / 60000
+[t-SNE] Computed conditional probabilities for sample 27000 / 60000
+[t-SNE] Computed conditional probabilities for sample 28000 / 60000
+[t-SNE] Computed conditional probabilities for sample 29000 / 60000
+[t-SNE] Computed conditional probabilities for sample 30000 / 60000
+[t-SNE] Computed conditional probabilities for sample 31000 / 60000
+[t-SNE] Computed conditional probabilities for sample 32000 / 60000
+[t-SNE] Computed conditional probabilities for sample 33000 / 60000
+[t-SNE] Computed conditional probabilities for sample 34000 / 60000
+[t-SNE] Computed conditional probabilities for sample 35000 / 60000
+[t-SNE] Computed conditional probabilities for sample 36000 / 60000
+[t-SNE] Computed conditional probabilities for sample 37000 / 60000
+[t-SNE] Computed conditional probabilities for sample 38000 / 60000
+[t-SNE] Computed conditional probabilities for sample 39000 / 60000
+[t-SNE] Computed conditional probabilities for sample 40000 / 60000
+[t-SNE] Computed conditional probabilities for sample 41000 / 60000
+[t-SNE] Computed conditional probabilities for sample 42000 / 60000
+[t-SNE] Computed conditional probabilities for sample 43000 / 60000
+[t-SNE] Computed conditional probabilities for sample 44000 / 60000
+[t-SNE] Computed conditional probabilities for sample 45000 / 60000
+[t-SNE] Computed conditional probabilities for sample 46000 / 60000
+[t-SNE] Computed conditional probabilities for sample 47000 / 60000
+[t-SNE] Computed conditional probabilities for sample 48000 / 60000
+[t-SNE] Computed conditional probabilities for sample 49000 / 60000
+[t-SNE] Computed conditional probabilities for sample 50000 / 60000
+[t-SNE] Computed conditional probabilities for sample 51000 / 60000
+[t-SNE] Computed conditional probabilities for sample 52000 / 60000
+[t-SNE] Computed conditional probabilities for sample 53000 / 60000
+[t-SNE] Computed conditional probabilities for sample 54000 / 60000
+[t-SNE] Computed conditional probabilities for sample 55000 / 60000
+[t-SNE] Computed conditional probabilities for sample 56000 / 60000
+[t-SNE] Computed conditional probabilities for sample 57000 / 60000
+[t-SNE] Computed conditional probabilities for sample 58000 / 60000
+[t-SNE] Computed conditional probabilities for sample 59000 / 60000
+[t-SNE] Computed conditional probabilities for sample 60000 / 60000
+[t-SNE] Mean sigma: 0.501433
+[t-SNE] Computed conditional probabilities in 0.181s
+[t-SNE] Iteration 50: error = 132.0797882, gradient norm = 0.0015379 (50 iterations in 5.505s)
+[t-SNE] Iteration 100: error = 120.1305847, gradient norm = 0.0032556 (50 iterations in 5.466s)
+[t-SNE] Iteration 150: error = 118.0632019, gradient norm = 0.0010548 (50 iterations in 5.618s)
+[t-SNE] Iteration 200: error = 117.7160721, gradient norm = 0.0005129 (50 iterations in 5.315s)
+[t-SNE] Iteration 250: error = 117.6286240, gradient norm = 0.0003902 (50 iterations in 5.448s)
+[t-SNE] KL divergence after 250 iterations with early exaggeration: 117.628624
+[t-SNE] Iteration 300: error = 5.5152674, gradient norm = 0.0061019 (50 iterations in 5.559s)
+[t-SNE] Iteration 350: error = 4.7152700, gradient norm = 0.0060863 (50 iterations in 4.998s)
+[t-SNE] Iteration 400: error = 4.2515349, gradient norm = 0.0059280 (50 iterations in 4.771s)
+[t-SNE] Iteration 450: error = 3.9464664, gradient norm = 0.0054477 (50 iterations in 4.706s)
+[t-SNE] Iteration 500: error = 3.7400560, gradient norm = 0.0048037 (50 iterations in 4.654s)
+[t-SNE] Iteration 550: error = 3.5895042, gradient norm = 0.0042825 (50 iterations in 4.630s)
+[t-SNE] Iteration 600: error = 3.4729643, gradient norm = 0.0038859 (50 iterations in 4.556s)
+[t-SNE] Iteration 650: error = 3.3791368, gradient norm = 0.0035613 (50 iterations in 4.603s)
+[t-SNE] Iteration 700: error = 3.3013258, gradient norm = 0.0033030 (50 iterations in 4.646s)
+[t-SNE] Iteration 750: error = 3.2352071, gradient norm = 0.0030769 (50 iterations in 4.632s)
+[t-SNE] Iteration 800: error = 3.1781211, gradient norm = 0.0028986 (50 iterations in 5.089s)
+[t-SNE] Iteration 850: error = 3.1279070, gradient norm = 0.0027458 (50 iterations in 5.022s)
+[t-SNE] Iteration 900: error = 3.0832169, gradient norm = 0.0026119 (50 iterations in 4.764s)
+[t-SNE] Iteration 950: error = 3.0432086, gradient norm = 0.0024917 (50 iterations in 4.616s)
+[t-SNE] Iteration 1000: error = 3.0070438, gradient norm = 0.0023826 (50 iterations in 4.700s)
+[t-SNE] KL divergence after 1000 iterations: 3.007044
+[t-SNE] Computing 91 nearest neighbors...
+[t-SNE] Indexed 60000 samples in 0.000s...
+[t-SNE] Computed neighbors for 60000 samples in 1.217s...
+[t-SNE] Computed conditional probabilities for sample 1000 / 60000
+[t-SNE] Computed conditional probabilities for sample 2000 / 60000
+[t-SNE] Computed conditional probabilities for sample 3000 / 60000
+[t-SNE] Computed conditional probabilities for sample 4000 / 60000
+[t-SNE] Computed conditional probabilities for sample 5000 / 60000
+[t-SNE] Computed conditional probabilities for sample 6000 / 60000
+[t-SNE] Computed conditional probabilities for sample 7000 / 60000
+[t-SNE] Computed conditional probabilities for sample 8000 / 60000
+[t-SNE] Computed conditional probabilities for sample 9000 / 60000
+[t-SNE] Computed conditional probabilities for sample 10000 / 60000
+[t-SNE] Computed conditional probabilities for sample 11000 / 60000
+[t-SNE] Computed conditional probabilities for sample 12000 / 60000
+[t-SNE] Computed conditional probabilities for sample 13000 / 60000
+[t-SNE] Computed conditional probabilities for sample 14000 / 60000
+[t-SNE] Computed conditional probabilities for sample 15000 / 60000
+[t-SNE] Computed conditional probabilities for sample 16000 / 60000
+[t-SNE] Computed conditional probabilities for sample 17000 / 60000
+[t-SNE] Computed conditional probabilities for sample 18000 / 60000
+[t-SNE] Computed conditional probabilities for sample 19000 / 60000
+[t-SNE] Computed conditional probabilities for sample 20000 / 60000
+[t-SNE] Computed conditional probabilities for sample 21000 / 60000
+[t-SNE] Computed conditional probabilities for sample 22000 / 60000
+[t-SNE] Computed conditional probabilities for sample 23000 / 60000
+[t-SNE] Computed conditional probabilities for sample 24000 / 60000
+[t-SNE] Computed conditional probabilities for sample 25000 / 60000
+[t-SNE] Computed conditional probabilities for sample 26000 / 60000
+[t-SNE] Computed conditional probabilities for sample 27000 / 60000
+[t-SNE] Computed conditional probabilities for sample 28000 / 60000
+[t-SNE] Computed conditional probabilities for sample 29000 / 60000
+[t-SNE] Computed conditional probabilities for sample 30000 / 60000
+[t-SNE] Computed conditional probabilities for sample 31000 / 60000
+[t-SNE] Computed conditional probabilities for sample 32000 / 60000
+[t-SNE] Computed conditional probabilities for sample 33000 / 60000
+[t-SNE] Computed conditional probabilities for sample 34000 / 60000
+[t-SNE] Computed conditional probabilities for sample 35000 / 60000
+[t-SNE] Computed conditional probabilities for sample 36000 / 60000
+[t-SNE] Computed conditional probabilities for sample 37000 / 60000
+[t-SNE] Computed conditional probabilities for sample 38000 / 60000
+[t-SNE] Computed conditional probabilities for sample 39000 / 60000
+[t-SNE] Computed conditional probabilities for sample 40000 / 60000
+[t-SNE] Computed conditional probabilities for sample 41000 / 60000
+[t-SNE] Computed conditional probabilities for sample 42000 / 60000
+[t-SNE] Computed conditional probabilities for sample 43000 / 60000
+[t-SNE] Computed conditional probabilities for sample 44000 / 60000
+[t-SNE] Computed conditional probabilities for sample 45000 / 60000
+[t-SNE] Computed conditional probabilities for sample 46000 / 60000
+[t-SNE] Computed conditional probabilities for sample 47000 / 60000
+[t-SNE] Computed conditional probabilities for sample 48000 / 60000
+[t-SNE] Computed conditional probabilities for sample 49000 / 60000
+[t-SNE] Computed conditional probabilities for sample 50000 / 60000
+[t-SNE] Computed conditional probabilities for sample 51000 / 60000
+[t-SNE] Computed conditional probabilities for sample 52000 / 60000
+[t-SNE] Computed conditional probabilities for sample 53000 / 60000
+[t-SNE] Computed conditional probabilities for sample 54000 / 60000
+[t-SNE] Computed conditional probabilities for sample 55000 / 60000
+[t-SNE] Computed conditional probabilities for sample 56000 / 60000
+[t-SNE] Computed conditional probabilities for sample 57000 / 60000
+[t-SNE] Computed conditional probabilities for sample 58000 / 60000
+[t-SNE] Computed conditional probabilities for sample 59000 / 60000
+[t-SNE] Computed conditional probabilities for sample 60000 / 60000
+[t-SNE] Mean sigma: 0.631434
+[t-SNE] Computed conditional probabilities in 0.493s
+[t-SNE] Iteration 50: error = 119.0492706, gradient norm = 0.0008376 (50 iterations in 6.206s)
+[t-SNE] Iteration 100: error = 110.0409622, gradient norm = 0.0015020 (50 iterations in 6.439s)
+[t-SNE] Iteration 150: error = 109.4811249, gradient norm = 0.0013039 (50 iterations in 5.581s)
+[t-SNE] Iteration 200: error = 109.1289978, gradient norm = 0.0002661 (50 iterations in 5.411s)
+[t-SNE] Iteration 250: error = 109.1043777, gradient norm = 0.0000397 (50 iterations in 5.385s)
+[t-SNE] KL divergence after 250 iterations with early exaggeration: 109.104378
+[t-SNE] Iteration 300: error = 4.7417879, gradient norm = 0.0054889 (50 iterations in 5.091s)
+[t-SNE] Iteration 350: error = 4.1135068, gradient norm = 0.0052326 (50 iterations in 5.072s)
+[t-SNE] Iteration 400: error = 3.7724109, gradient norm = 0.0049501 (50 iterations in 5.090s)
+[t-SNE] Iteration 450: error = 3.5488145, gradient norm = 0.0047552 (50 iterations in 5.045s)
+[t-SNE] Iteration 500: error = 3.3889418, gradient norm = 0.0045636 (50 iterations in 5.077s)
+[t-SNE] Iteration 550: error = 3.2707944, gradient norm = 0.0042632 (50 iterations in 5.161s)
+[t-SNE] Iteration 600: error = 3.1809068, gradient norm = 0.0039170 (50 iterations in 5.117s)
+[t-SNE] Iteration 650: error = 3.1105285, gradient norm = 0.0036341 (50 iterations in 5.347s)
+[t-SNE] Iteration 700: error = 3.0537381, gradient norm = 0.0033596 (50 iterations in 5.249s)
+[t-SNE] Iteration 750: error = 3.0066686, gradient norm = 0.0031455 (50 iterations in 5.096s)
+[t-SNE] Iteration 800: error = 2.9670396, gradient norm = 0.0029413 (50 iterations in 5.021s)
+[t-SNE] Iteration 850: error = 2.9331264, gradient norm = 0.0027804 (50 iterations in 5.221s)
+[t-SNE] Iteration 900: error = 2.9037085, gradient norm = 0.0026118 (50 iterations in 5.051s)
+[t-SNE] Iteration 950: error = 2.8778625, gradient norm = 0.0024971 (50 iterations in 5.032s)
+[t-SNE] Iteration 1000: error = 2.8549769, gradient norm = 0.0023637 (50 iterations in 5.393s)
+[t-SNE] KL divergence after 1000 iterations: 2.854977
+[t-SNE] Computing 151 nearest neighbors...
+[t-SNE] Indexed 60000 samples in 0.000s...
+[t-SNE] Computed neighbors for 60000 samples in 1.680s...
+[t-SNE] Computed conditional probabilities for sample 1000 / 60000
+[t-SNE] Computed conditional probabilities for sample 2000 / 60000
+[t-SNE] Computed conditional probabilities for sample 3000 / 60000
+[t-SNE] Computed conditional probabilities for sample 4000 / 60000
+[t-SNE] Computed conditional probabilities for sample 5000 / 60000
+[t-SNE] Computed conditional probabilities for sample 6000 / 60000
+[t-SNE] Computed conditional probabilities for sample 7000 / 60000
+[t-SNE] Computed conditional probabilities for sample 8000 / 60000
+[t-SNE] Computed conditional probabilities for sample 9000 / 60000
+[t-SNE] Computed conditional probabilities for sample 10000 / 60000
+[t-SNE] Computed conditional probabilities for sample 11000 / 60000
+[t-SNE] Computed conditional probabilities for sample 12000 / 60000
+[t-SNE] Computed conditional probabilities for sample 13000 / 60000
+[t-SNE] Computed conditional probabilities for sample 14000 / 60000
+[t-SNE] Computed conditional probabilities for sample 15000 / 60000
+[t-SNE] Computed conditional probabilities for sample 16000 / 60000
+[t-SNE] Computed conditional probabilities for sample 17000 / 60000
+[t-SNE] Computed conditional probabilities for sample 18000 / 60000
+[t-SNE] Computed conditional probabilities for sample 19000 / 60000
+[t-SNE] Computed conditional probabilities for sample 20000 / 60000
+[t-SNE] Computed conditional probabilities for sample 21000 / 60000
+[t-SNE] Computed conditional probabilities for sample 22000 / 60000
+[t-SNE] Computed conditional probabilities for sample 23000 / 60000
+[t-SNE] Computed conditional probabilities for sample 24000 / 60000
+[t-SNE] Computed conditional probabilities for sample 25000 / 60000
+[t-SNE] Computed conditional probabilities for sample 26000 / 60000
+[t-SNE] Computed conditional probabilities for sample 27000 / 60000
+[t-SNE] Computed conditional probabilities for sample 28000 / 60000
+[t-SNE] Computed conditional probabilities for sample 29000 / 60000
+[t-SNE] Computed conditional probabilities for sample 30000 / 60000
+[t-SNE] Computed conditional probabilities for sample 31000 / 60000
+[t-SNE] Computed conditional probabilities for sample 32000 / 60000
+[t-SNE] Computed conditional probabilities for sample 33000 / 60000
+[t-SNE] Computed conditional probabilities for sample 34000 / 60000
+[t-SNE] Computed conditional probabilities for sample 35000 / 60000
+[t-SNE] Computed conditional probabilities for sample 36000 / 60000
+[t-SNE] Computed conditional probabilities for sample 37000 / 60000
+[t-SNE] Computed conditional probabilities for sample 38000 / 60000
+[t-SNE] Computed conditional probabilities for sample 39000 / 60000
+[t-SNE] Computed conditional probabilities for sample 40000 / 60000
+[t-SNE] Computed conditional probabilities for sample 41000 / 60000
+[t-SNE] Computed conditional probabilities for sample 42000 / 60000
+[t-SNE] Computed conditional probabilities for sample 43000 / 60000
+[t-SNE] Computed conditional probabilities for sample 44000 / 60000
+[t-SNE] Computed conditional probabilities for sample 45000 / 60000
+[t-SNE] Computed conditional probabilities for sample 46000 / 60000
+[t-SNE] Computed conditional probabilities for sample 47000 / 60000
+[t-SNE] Computed conditional probabilities for sample 48000 / 60000
+[t-SNE] Computed conditional probabilities for sample 49000 / 60000
+[t-SNE] Computed conditional probabilities for sample 50000 / 60000
+[t-SNE] Computed conditional probabilities for sample 51000 / 60000
+[t-SNE] Computed conditional probabilities for sample 52000 / 60000
+[t-SNE] Computed conditional probabilities for sample 53000 / 60000
+[t-SNE] Computed conditional probabilities for sample 54000 / 60000
+[t-SNE] Computed conditional probabilities for sample 55000 / 60000
+[t-SNE] Computed conditional probabilities for sample 56000 / 60000
+[t-SNE] Computed conditional probabilities for sample 57000 / 60000
+[t-SNE] Computed conditional probabilities for sample 58000 / 60000
+[t-SNE] Computed conditional probabilities for sample 59000 / 60000
+[t-SNE] Computed conditional probabilities for sample 60000 / 60000
+[t-SNE] Mean sigma: 0.689406
+[t-SNE] Computed conditional probabilities in 0.812s
+[t-SNE] Iteration 50: error = 112.9054565, gradient norm = 0.0004366 (50 iterations in 6.711s)
+[t-SNE] Iteration 100: error = 105.1831207, gradient norm = 0.0017943 (50 iterations in 7.062s)
+[t-SNE] Iteration 150: error = 104.6082001, gradient norm = 0.0001604 (50 iterations in 5.813s)
+[t-SNE] Iteration 200: error = 104.6013489, gradient norm = 0.0000270 (50 iterations in 5.677s)
+[t-SNE] Iteration 250: error = 104.6011581, gradient norm = 0.0000168 (50 iterations in 5.792s)
+[t-SNE] KL divergence after 250 iterations with early exaggeration: 104.601158
+[t-SNE] Iteration 300: error = 4.3697863, gradient norm = 0.0052083 (50 iterations in 5.398s)
+[t-SNE] Iteration 350: error = 3.8220959, gradient norm = 0.0048030 (50 iterations in 5.499s)
+[t-SNE] Iteration 400: error = 3.5357084, gradient norm = 0.0044984 (50 iterations in 5.443s)
+[t-SNE] Iteration 450: error = 3.3511944, gradient norm = 0.0042709 (50 iterations in 5.471s)
+[t-SNE] Iteration 500: error = 3.2202518, gradient norm = 0.0040978 (50 iterations in 5.445s)
+[t-SNE] Iteration 550: error = 3.1227167, gradient norm = 0.0039043 (50 iterations in 5.450s)
+[t-SNE] Iteration 600: error = 3.0479095, gradient norm = 0.0036808 (50 iterations in 5.448s)
+[t-SNE] Iteration 650: error = 2.9890790, gradient norm = 0.0034655 (50 iterations in 5.435s)
+[t-SNE] Iteration 700: error = 2.9417343, gradient norm = 0.0032449 (50 iterations in 5.464s)
+[t-SNE] Iteration 750: error = 2.9029677, gradient norm = 0.0030328 (50 iterations in 5.481s)
+[t-SNE] Iteration 800: error = 2.8707042, gradient norm = 0.0028634 (50 iterations in 5.521s)
+[t-SNE] Iteration 850: error = 2.8434772, gradient norm = 0.0026781 (50 iterations in 5.580s)
+[t-SNE] Iteration 900: error = 2.8200905, gradient norm = 0.0025320 (50 iterations in 5.545s)
+[t-SNE] Iteration 950: error = 2.7999368, gradient norm = 0.0023794 (50 iterations in 5.578s)
+[t-SNE] Iteration 1000: error = 2.7822809, gradient norm = 0.0022774 (50 iterations in 5.572s)
+[t-SNE] KL divergence after 1000 iterations: 2.782281
+
+[t-SNE] Computing 106 nearest neighbors...
+[t-SNE] Indexed 227 samples in 0.000s...
+[t-SNE] Computed neighbors for 227 samples in 0.002s...
+[t-SNE] Computed conditional probabilities for sample 227 / 227
+[t-SNE] Mean sigma: 1.284482
+[t-SNE] Computed conditional probabilities in 0.002s
+[t-SNE] Iteration 50: error = 51.0640488, gradient norm = 0.2404372 (50 iterations in 0.030s)
+[t-SNE] Iteration 100: error = 51.8337021, gradient norm = 0.2022250 (50 iterations in 0.034s)
+[t-SNE] Iteration 150: error = 52.4311447, gradient norm = 0.1778036 (50 iterations in 0.037s)
+[t-SNE] Iteration 200: error = 52.5737000, gradient norm = 0.2568711 (50 iterations in 0.030s)
+[t-SNE] Iteration 250: error = 53.2622490, gradient norm = 0.1826818 (50 iterations in 0.029s)
+[t-SNE] KL divergence after 250 iterations with early exaggeration: 53.262249
+[t-SNE] Iteration 300: error = 0.6609392, gradient norm = 0.0051774 (50 iterations in 0.028s)
+[t-SNE] Iteration 350: error = 0.6507165, gradient norm = 0.0009870 (50 iterations in 0.027s)
+[t-SNE] Iteration 400: error = 0.6498534, gradient norm = 0.0003725 (50 iterations in 0.026s)
+[t-SNE] Iteration 450: error = 0.6495665, gradient norm = 0.0000988 (50 iterations in 0.028s)
+[t-SNE] Iteration 500: error = 0.6494896, gradient norm = 0.0001420 (50 iterations in 0.025s)
+[t-SNE] Iteration 550: error = 0.6494584, gradient norm = 0.0001130 (50 iterations in 0.026s)
+[t-SNE] Iteration 600: error = 0.6495490, gradient norm = 0.0001912 (50 iterations in 0.022s)
+[t-SNE] Iteration 650: error = 0.6495095, gradient norm = 0.0001273 (50 iterations in 0.030s)
+[t-SNE] Iteration 700: error = 0.6495083, gradient norm = 0.0000703 (50 iterations in 0.026s)
+[t-SNE] Iteration 750: error = 0.6494849, gradient norm = 0.0001325 (50 iterations in 0.026s)
+[t-SNE] Iteration 800: error = 0.6494884, gradient norm = 0.0001226 (50 iterations in 0.030s)
+[t-SNE] Iteration 850: error = 0.6494745, gradient norm = 0.0000480 (50 iterations in 0.027s)
+[t-SNE] Iteration 900: error = 0.6494980, gradient norm = 0.0000762 (50 iterations in 0.026s)
+[t-SNE] Iteration 900: did not make any progress during the last 300 episodes. Finished.
+[t-SNE] KL divergence after 900 iterations: 0.649498
