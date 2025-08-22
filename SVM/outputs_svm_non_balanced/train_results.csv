@@ -1,0 +1,7 @@
+optimization finished, #iter = 1836632
+obj = -107670.225117, rho = 0.756797
+nSV = 53854, nBSV = 53813
+Total nSV = 53854
+Train SVM: |                                                                                                                                                         | 6/?
+[LibSVM][SVM] Training complete. #Support vectors: 53854
+[Holdout] mIoU=0.6452  Dice=0.6138  IoU_fg=0.4713  IoU_bg=0.8191

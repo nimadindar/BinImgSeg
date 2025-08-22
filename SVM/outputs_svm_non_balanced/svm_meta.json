@@ -1,0 +1,13 @@
+{
+  "data": "dataset",
+  "out": "SVM/outputs_svm_balanced",
+  "size": 384,
+  "exts": ".png,.jpg,.jpeg",
+  "per_image_fg": 400,
+  "per_image_bg": 100,
+  "C": 2.0,
+  "gamma": "scale",
+  "refine": true,
+  "eval_split": true,
+  "save_test_preds": true
+}
