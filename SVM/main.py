@@ -1,3 +1,4 @@
+
 import os, glob, json, argparse, time
 from tqdm import tqdm
 import numpy as np
@@ -263,13 +264,13 @@ def _predict_scores_chunk(clf, X_chunk):
         return _sigmoid(s)
 
 def predict_image_svm(clf, img_rgb_u8, scrib_u8, size=384, refine=True, thr=0.5,
-                      n_jobs=-1, batch_size=262_144):
+                      n_jobs=1, batch_size=262_144):
     """
     Parallelized over pixel-batches.
       - n_jobs: processes to use (<= #CPU cores). 1 = no parallelism.
       - batch_size: number of pixels per chunk (tune for memory/CPU).
     """
-    if size is not None and size > 0:
+    if size is not None:
         img = cv2.resize(img_rgb_u8, (size, size), interpolation=cv2.INTER_LINEAR)
         scrib = cv2.resize(scrib_u8, (size, size), interpolation=cv2.INTER_NEAREST)
     else:
@@ -284,8 +285,7 @@ def predict_image_svm(clf, img_rgb_u8, scrib_u8, size=384, refine=True, thr=0.5,
     else:
         indices = list(range(0, X.shape[0], batch_size))
         chunks = (X[i:i+batch_size] for i in indices)
-        results = Parallel(n_jobs=n_jobs, prefer="threads", 
-                           batch_size=1, max_nbytes=None)(
+        results = Parallel(n_jobs=n_jobs, prefer="processes", batch_size=1)(
             delayed(_predict_scores_chunk)(clf, chunk) for chunk in chunks
         )
         probs_flat = np.concatenate(results, axis=0).astype(np.float32)
@@ -314,45 +314,85 @@ def confusion_and_scores(pred01, gt01):
     return {"tp":tp,"fp":fp,"fn":fn,"tn":tn,"iou_fg":iou_fg,"iou_bg":iou_bg,"miou":miou,"dice":dice}
 
 def main():
+    train = False
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", type=str, default="dataset")
     ap.add_argument("--out", type=str, default="SVM/outputs_svm_balanced")
-    ap.add_argument("--size", type=int, default=None)
+    ap.add_argument("--size", type=int, default=384)
     ap.add_argument("--exts", type=str, default=".png,.jpg,.jpeg")
+    ap.add_argument("--per_image_fg", type=int, default=400)
+    ap.add_argument("--per_image_bg", type=int, default=100)
+    ap.add_argument("--C", type=float, default=2.0)
+    ap.add_argument("--gamma", type=str, default="scale")  
     ap.add_argument("--refine", action="store_true", help="edge-aware postprocessing")
+    ap.add_argument("--eval_split", action="store_true", help="evaluate on a 15% holdout from train")
     ap.add_argument("--save_test_preds", action="store_true", help="run on dataset/test and save PNGs")
-    ap.add_argument("--infer_only", action="store_true", help="skip training, just load model and run inference")
     args = ap.parse_args()
 
     ensure_dir(args.out)
     exts = tuple([e.strip() for e in args.exts.split(",") if len(e.strip())])
 
-    import joblib
-    model_path = os.path.join(args.out, "svm_pipeline.joblib")
-
-    if args.infer_only:
-        if not os.path.exists(model_path):
-            raise FileNotFoundError(f"No trained model found at {model_path}")
-        print(f"[SVM] Loading trained model from {model_path}")
-        clf = joblib.load(model_path)
-    else:
-
-        tr_img_dir = os.path.join(args.data, "train/images")
-        tr_scr_dir = os.path.join(args.data, "train/scribbles")
-        tr_gt_dir  = os.path.join(args.data, "train/ground_truth")
-
-        X, y = gather_training_data(tr_img_dir, tr_scr_dir, tr_gt_dir,
-                                    size=args.size,
-                                    per_image_fg=400,
-                                    per_image_bg=100,
-                                    exts=exts,
-                                    use_lbp=False,
-                                    augment_flips=True)
+    tr_img_dir = os.path.join(args.data, "train/images")
+    tr_scr_dir = os.path.join(args.data, "train/scribbles")
+    tr_gt_dir  = os.path.join(args.data, "train/ground_truth")
+    X, y = gather_training_data(tr_img_dir, tr_scr_dir, tr_gt_dir,
+                                size=args.size,
+                                per_image_fg=args.per_image_fg,
+                                per_image_bg=args.per_image_bg,
+                                exts=exts,
+                                use_lbp=False,
+                                augment_flips=True)
+    
+    if train:
         print(f"[SVM] Training samples: {X.shape}, positives={int(y.sum())}, negatives={int((y==0).sum())}")
 
-        clf = train_svm_classifier(X, y, C=2.0, gamma="scale")
-        joblib.dump(clf, model_path, compress=3)
-        print(f"[SVM] Model saved to {model_path}")
+        gamma = float(args.gamma) if args.gamma not in ("scale", "auto") else args.gamma
+        clf = train_svm_classifier(X, y, C=args.C, gamma=gamma)
+
+        import joblib
+        joblib.dump(clf, os.path.join(args.out, "svm_pipeline.joblib"), compress=3)
+        with open(os.path.join(args.out, "svm_meta.json"), "w") as f:
+            json.dump(vars(args), f, indent=2)
+
+    if args.eval_split:
+        img_paths = list_with_exts(tr_img_dir, exts)
+        if len(img_paths) == 0:
+            print("[Eval] No images found; skipping.")
+        else:
+            rng = np.random.default_rng(42)
+            n = len(img_paths)
+            idxs = np.arange(n); rng.shuffle(idxs)
+            n_val = max(1, int(0.15*n))
+            val_idx = set(idxs[:n_val])
+
+            stats = []
+            for i, p_img in enumerate(tqdm(img_paths, desc="Eval holdout")):
+                if i not in val_idx: continue
+                base = os.path.splitext(os.path.basename(p_img))[0]
+                p_scrib = None; p_gt = None
+                for e in exts:
+                    q = os.path.join(tr_scr_dir, base+e)
+                    if os.path.exists(q): p_scrib=q; break
+                for e in exts:
+                    q = os.path.join(tr_gt_dir, base+e)
+                    if os.path.exists(q): p_gt=q; break
+                if p_scrib is None or p_gt is None: continue
+
+                img  = imread(p_img)
+                scrib= imread_gray(p_scrib)
+                gt   = imread_gray(p_gt)
+                gt01 = (cv2.resize(gt, (img.shape[1], img.shape[0]), interpolation=cv2.INTER_NEAREST) > 0).astype(np.uint8)
+
+                probs, pred = predict_image_svm(clf, img, scrib, size=args.size, refine=args.refine, thr=0.5)
+                pred_full = cv2.resize(pred.astype(np.uint8), (gt01.shape[1], gt01.shape[0]), interpolation=cv2.INTER_NEAREST)
+                scores = confusion_and_scores(pred_full, gt01)
+                stats.append(scores)
+
+            if stats:
+                agg = {k: float(np.mean([s[k] for s in stats])) for k in stats[0].keys()}
+                print(f"[Holdout] mIoU={agg['miou']:.4f}  Dice={agg['dice']:.4f}  IoU_fg={agg['iou_fg']:.4f}  IoU_bg={agg['iou_bg']:.4f}")
+                with open(os.path.join(args.out, "holdout_metrics.json"), "w") as f:
+                    json.dump(agg, f, indent=2)
 
     if args.save_test_preds:
         te_img_dir = os.path.join(args.data, "test/images")
@@ -366,22 +406,15 @@ def main():
             p_scrib = None
             for e in exts:
                 q = os.path.join(te_scr_dir, base+e)
-                if os.path.exists(q):
-                    p_scrib=q; break
+                if os.path.exists(q): p_scrib=q; break
             if p_scrib is None:
                 continue
-
             img  = imread(p_img)
             scrib= imread_gray(p_scrib)
-            probs, pred = predict_image_svm(clf, img, scrib,
-                                            size=args.size,
-                                            refine=args.refine,
-                                            thr=0.5,
-                                            n_jobs=-1)   
 
+            probs, pred = predict_image_svm(clf, img, scrib, size=args.size, refine=args.refine, thr=0.5)
             out = (pred*255).astype(np.uint8)
             cv2.imwrite(os.path.join(pred_dir, base + ".png"), out)
-
 
 if __name__ == "__main__":
     main()
