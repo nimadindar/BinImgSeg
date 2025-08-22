@@ -16,7 +16,7 @@ def compute_fg_bg_ratio(gt_dir, exts=(".png",".jpg",".jpeg")):
         gt = cv2.imread(p, cv2.IMREAD_GRAYSCALE)
         if gt is None:
             continue
-        gt_bin = (gt > 0).astype(np.uint8)  
+        gt_bin = (gt > 0).astype(np.uint8)   # foreground = 1, background = 0
         fg = int(gt_bin.sum())
         bg = int(gt_bin.size - fg)
         total_fg += fg
@@ -30,6 +30,6 @@ def compute_fg_bg_ratio(gt_dir, exts=(".png",".jpg",".jpeg")):
     print(f"[Global proportion over all pixels] FG: {global_prop:.4f}, BG: {1-global_prop:.4f}")
     return per_image_props, avg_prop, global_prop
 
-
-gt_dir = "dataset/train/ground_truth"
+# Example usage:
+gt_dir = "dataset/train_not_filtered/ground_truth"
 per_image_props, avg_prop, global_prop = compute_fg_bg_ratio(gt_dir)
