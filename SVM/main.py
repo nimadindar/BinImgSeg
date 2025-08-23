@@ -3,7 +3,7 @@ import os, glob, json, argparse, time
 from tqdm import tqdm
 import numpy as np
 import cv2
-from joblib import Parallel, delayed
+from joblib import Parallel, delayed, load
 
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
@@ -354,7 +354,10 @@ def main():
         with open(os.path.join(args.out, "svm_meta.json"), "w") as f:
             json.dump(vars(args), f, indent=2)
 
+
     if args.eval_split:
+        clf = load(os.path.join(args.out, "svm_pipeline.joblib"))
+
         img_paths = list_with_exts(tr_img_dir, exts)
         if len(img_paths) == 0:
             print("[Eval] No images found; skipping.")
@@ -383,6 +386,7 @@ def main():
                 gt   = imread_gray(p_gt)
                 gt01 = (cv2.resize(gt, (img.shape[1], img.shape[0]), interpolation=cv2.INTER_NEAREST) > 0).astype(np.uint8)
 
+                # 🔹 evaluate using loaded clf
                 probs, pred = predict_image_svm(clf, img, scrib, size=args.size, refine=args.refine, thr=0.5)
                 pred_full = cv2.resize(pred.astype(np.uint8), (gt01.shape[1], gt01.shape[0]), interpolation=cv2.INTER_NEAREST)
                 scores = confusion_and_scores(pred_full, gt01)
@@ -393,6 +397,7 @@ def main():
                 print(f"[Holdout] mIoU={agg['miou']:.4f}  Dice={agg['dice']:.4f}  IoU_fg={agg['iou_fg']:.4f}  IoU_bg={agg['iou_bg']:.4f}")
                 with open(os.path.join(args.out, "holdout_metrics.json"), "w") as f:
                     json.dump(agg, f, indent=2)
+
 
     if args.save_test_preds:
         te_img_dir = os.path.join(args.data, "test/images")
