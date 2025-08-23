@@ -1,7 +1,6 @@
 dataset
 *.pt
 log.txt
-preds
 *.jpg
 *.pt
 *.npz
