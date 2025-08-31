@@ -28,9 +28,9 @@ def train(args):
     set_seed(args.seed)
     device = 'mps' if torch.mps.is_available() else 'cuda' if torch.cuda.is_available() else 'cpu'
     
-    ds = ScribbleDataset(os.path.join(args.data, 'train/images'),
-                         os.path.join(args.data, 'train/scribbles'),
-                         os.path.join(args.data, 'train/ground_truth'),
+    ds = ScribbleDataset(os.path.join(args.data, 'train_not_filtered/images'),
+                         os.path.join(args.data, 'train_not_filtered/scribbles'),
+                         os.path.join(args.data, 'train_not_filtered/ground_truth'),
                          augment=True, size=args.size, ext=args.ext)
 
     n_val = max(1, int(0.15*len(ds)))
@@ -124,9 +124,9 @@ def train_hybrid(args,
     tfms_val   = build_val_tfms(args.size)
 
     ds_full = HybridTrainDataset(
-        os.path.join(args.data, 'train/images'),
-        os.path.join(args.data, 'train/scribbles'),
-        os.path.join(args.data, 'train/ground_truth'),
+        os.path.join(args.data, 'train_not_filtered/images'),
+        os.path.join(args.data, 'train_not_filtered/scribbles'),
+        os.path.join(args.data, 'train_not_filtered/ground_truth'),
         tfms_train,
         exts=(args.ext,) if hasattr(args, "ext") else (".png",".jpg",".jpeg"),
     )
@@ -235,9 +235,9 @@ def infer(args):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data', type=str, default='dataset')
-    parser.add_argument('--out', type=str, default='outputs_unet_hybrid_wo_outlier')
-    parser.add_argument('--save', type=str, default='outputs_unet_hybrid_wo_outlier/preds')
-    parser.add_argument('--mode', type=str, choices=['train','infer'], default='pred')
+    parser.add_argument('--out', type=str, default='outputs_unet_hybrid_w_outlier')
+    parser.add_argument('--save', type=str, default='outputs_unet_hybrid_w_outlier/preds')
+    parser.add_argument('--mode', type=str, choices=['train','infer'], default='train')
     parser.add_argument('--size', type=int, default=384)
     parser.add_argument('--bs', type=int, default=4)
     parser.add_argument('--epochs', type=int, default=80)
