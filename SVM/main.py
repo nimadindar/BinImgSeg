@@ -316,7 +316,7 @@ def confusion_and_scores(pred01, gt01):
 def main():
     train = False
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data", type=str, default="dataset")
+    ap.add_argument("--data", type=str, default="test2")
     ap.add_argument("--out", type=str, default="SVM/outputs_svm_balanced")
     ap.add_argument("--size", type=int, default=384)
     ap.add_argument("--exts", type=str, default=".png,.jpg,.jpeg")
@@ -332,8 +332,8 @@ def main():
     ensure_dir(args.out)
     exts = tuple([e.strip() for e in args.exts.split(",") if len(e.strip())])
 
-    tr_img_dir = os.path.join(args.data, "train/images")
-    tr_scr_dir = os.path.join(args.data, "train/scribbles")
+    tr_img_dir = os.path.join(args.data, "images")
+    tr_scr_dir = os.path.join(args.data, "Scribbles")
     tr_gt_dir  = os.path.join(args.data, "train/ground_truth")
     X, y = gather_training_data(tr_img_dir, tr_scr_dir, tr_gt_dir,
                                 size=args.size,
@@ -400,9 +400,9 @@ def main():
 
 
     if args.save_test_preds:
-        te_img_dir = os.path.join(args.data, "test/images")
-        te_scr_dir = os.path.join(args.data, "test/scribbles")
-        pred_dir = os.path.join(args.out, "predictions_test")
+        te_img_dir = os.path.join(args.data, "images")
+        te_scr_dir = os.path.join(args.data, "Scribbles")
+        pred_dir = os.path.join(args.out, "final_predictions")
         ensure_dir(pred_dir)
 
         img_paths = list_with_exts(te_img_dir, exts)
@@ -417,7 +417,8 @@ def main():
             img  = imread(p_img)
             scrib= imread_gray(p_scrib)
 
-            probs, pred = predict_image_svm(clf, img, scrib, size=args.size, refine=args.refine, thr=0.5)
+            clf = load(os.path.join(args.out, "svm_pipeline.joblib"))
+            probs, pred = predict_image_svm(clf, img, scrib, size=None, refine=args.refine, thr=0.6)
             out = (pred*255).astype(np.uint8)
             cv2.imwrite(os.path.join(pred_dir, base + ".png"), out)
 

@@ -36,5 +36,5 @@ def fix_masks(folder, save_fixed=True, out_dir=None):
 
 
 if __name__ == "__main__":
-    folder_path = "SVM/outputs_svm_balanced/preds" 
+    folder_path = "SVM/outputs_svm_balanced/final_predictions" 
     fix_masks(folder_path, save_fixed=True)  
